@@ -155,9 +155,13 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
 
 // Store all config file contents (raw)
 const configContents = {
-    'config.yml': `# ═══════════════════════════════════════════════════════════════════
+'config.yml': `# ═══════════════════════════════════════════════════════════════════
 #                    MACE ROULETTE - MAIN CONFIG
 # ═══════════════════════════════════════════════════════════════════
+
+# LICENSE SETTINGS
+# Open a ticket on Discord to get your license key
+license: "YOUR-LICENSE-KEY-HERE"
 
 # Database Configuration
 # Supports MySQL/MariaDB for cross-server statistics
@@ -234,7 +238,7 @@ worlds-mode:
     z: 0
     yaw: 0
     pitch: 0`,
-    'arena.yml': `# ═══════════════════════════════════════════════════════════════════
+'arena.yml': `# ═══════════════════════════════════════════════════════════════════
 #                       ARENA CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
 
@@ -250,36 +254,36 @@ modifiers:
   enabled: true
   list:
     # Map Modifiers - Changes arena floor
-    - "Icy Land"                    # Floor becomes ice
-    - "Glass Map"                   # Floor becomes glass
-    - "Slime Map"                   # Floor becomes slime blocks
-    - "Donut Map"                   # Creates hole in center
-    - "Transparent Arena"           # Floor becomes barriers (invisible)
+    - ["Icy Land", "&f&lIcy Land"]
+    - ["Glass Map", "&f&lGlass Map"]
+    - ["Slime Map", "&f&lSlime Map"]
+    - ["Donut Map", "&f&lDonut Map"]
+    - ["Transparent Arena", "&f&lTransparent Arena"]
 
     # Gameplay Modifiers - Changes mechanics
-    - "Low Gravity"                 # Players float
-    - "Knockback Boost"             # All players get knockback sticks
-    - "Darkness"                    # Blindness + warden effects
-    - "Thunderstorm"                # Constant lightning strikes
-    - "Speed Frenzy"                # All players get Speed III
-    - "Jump Boost"                  # All players get Jump Boost III
-    - "Explosive Hits"              # Hits create explosions
-    - "Size Growth"                 # Players grow when moving
-    - "Random Sizes"                # Random player sizes
-    - "Wind Charge Storm"           # Wind charges fall from sky
-    - "Elytra Launch"               # Players get elytra + levitation
-    - "Player Stacks"               # Players can stack on each other
-    - "TNT Rain"                    # TNT falls from sky, explosions push players
+    - ["Low Gravity", "&f&lLow Gravity"]
+    - ["Knockback Boost", "&f&lKnockback Boost"]
+    - ["Darkness", "&f&lDarkness"]
+    - ["Thunderstorm", "&f&lThunderstorm"]
+    - ["Speed Frenzy", "&f&lSpeed Frenzy"]
+    - ["Jump Boost", "&f&lJump Boost"]
+    - ["Explosive Hits", "&f&lExplosive Hits"]
+    - ["Size Growth", "&f&lSize Growth"]
+    - ["Random Sizes", "&f&lRandom Sizes"]
+    - ["Wind Charge Storm", "&f&lWind Charge Storm"]
+    - ["Elytra Launch", "&f&lElytra Launch"]
+    - ["Player Stacks", "&f&lPlayer Stacks"]
+    - ["TNT Rain", "&f&lTNT Rain"]
 
     # Mace Modifiers - Changes mace holder effects
-    - "Tiny Mace"                    # Mace holders become tiny (0.5x)
-    - "Big Mace"                     # Mace holders become huge (2.5x)
-    - "Mace or Die"                  # Mace holders must KILL, not just hit
-    - "Double Mace"                  # 2 maces per round
-    - "Triple Mace"                  # 3 maces per round
-    - "Shockwave Mace"               # Mace kills create shock waves
-    - "Mace Drop"                    # Mace drops from barrel in center
-    - "Windburst Mace"               # Mace has Wind Burst III enchantment`,
+    - ["Tiny Mace", "&f&lTiny Mace"]
+    - ["Big Mace", "&f&lBig Mace"]
+    - ["Mace or Die", "&f&lMace or Die"]
+    - ["Double Mace", "&f&lDouble Mace"]
+    - ["Triple Mace", "&f&lTriple Mace"]
+    - ["Shockwave Mace", "&f&lShockwave Mace"]
+    - ["Mace Drop", "&f&lMace Drop"]
+    - ["Windburst Mace", "&f&lWindburst Mace"]`,
     'language.yml': `# ═══════════════════════════════════════════════════════════════════
 #                    LANGUAGE CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
@@ -474,6 +478,58 @@ countdown-line: "&eɴᴇxᴛ ʀᴏᴜɴᴅ: &f{seconds}ꜱ"
 # {seconds}      - Countdown seconds
 # And also you can use any place holder from placeholderAPI
 # ═══════════════════════════════════════════════════════════════════`,
+'levels.yml': `# ═══════════════════════════════════════════════════════════════════
+#                     LEVEL SYSTEM CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+# Level Tiers Configuration
+# Format: [identifier, display_name]
+# identifier: Internal name used in code (PLEASE DO NOT CHANGE)
+# display_name: What players see in chat/menus (includes color codes)
+
+list:
+  # Tier 0: Bronze (Levels I-X)
+  - ["Bronze", "&6&lBronze"]
+
+  # Tier 1: Silver (Levels I-X)
+  - ["Silver", "&7&lSilver"]
+
+  # Tier 2: Gold (Levels I-X)
+  - ["Gold", "&6&lGold"]
+
+  # Tier 3: Platinum (Levels I-X)
+  - ["Platinum", "&b&lPlatinum"]
+
+  # Tier 4: Diamond (Levels I-X)
+  - ["Diamond", "&b&lDiamond"]
+
+  # Tier 5: Master (Levels I-X)
+  - ["Master", "&d&lMaster"]
+
+  # Tier 6: Elite (Levels I-X)
+  - ["Elite", "&e&lElite"]
+
+  # Tier 7: Legend (Levels I-X)
+  - ["Legend", "&e&lLegend"]
+
+  # Tier 8: CHAMPION (No level numbers)
+  - ["Champion", "&c&lCHAMPION"]
+
+# Level Number Format
+# Roman numerals are default, but you can change the format
+# Available placeholders:
+#   {number} - the level number (1-10)
+#   {roman} - the level number in Roman numerals (I, II, III, IV, V, VI, VII, VIII, IX, X)
+level-number-format: "{roman}"
+
+# Progress Bar Settings
+progress-bar:
+  filled-character: "|"
+  empty-character: "|"
+  filled-color: "&a"
+  empty-color: "&7"
+  left-bracket: "&8["
+  right-bracket: "&8]"`,
     'spawn.yml': `# ═══════════════════════════════════════════════════════════════════
 #                       SPAWN CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
@@ -1416,8 +1472,15 @@ permissions:
 // Detailed explanations for each configuration section
 const configGuides = {
     'config.yml': [
-        {
-            section: 'Database Configuration',
+    {
+        section: 'License Settings',
+        description: 'License verification for Mace Roulette plugin',
+        settings: [
+            { key: 'license', value: 'YOUR-LICENSE-KEY-HERE', description: 'Your purchased license key. Open a ticket on Discord to get your key.' }
+        ]
+    },
+    {
+        section: 'Database Configuration',
             description: 'Set up MySQL/MariaDB for cross-server statistics. If disabled, plugin uses SQLite locally.',
             settings: [
                 { key: 'database.enabled', value: 'false', description: 'Set to true to enable MySQL database storage' },
@@ -1502,67 +1565,103 @@ const configGuides = {
             ]
         }
     ],
-    'arena.yml': [
-        {
-            section: 'Arena Location',
-            description: 'Set the center of your arena',
-            settings: [
-                { key: 'center', value: '""', description: 'Format: world,x,y,z,yaw,pitch (e.g., world,0,100,0,0,0)' },
-                { key: 'facing', value: '""', description: 'Direction players face when spawned (N, S, E, W)' }
-            ]
-        },
-        {
-            section: 'Modifiers Configuration',
-            description: 'Enable/disable and select which modifiers appear in games',
-            settings: [
-                { key: 'modifiers.enabled', value: 'true', description: 'Master switch for all modifiers' }
-            ]
-        },
-        {
-            section: 'Map Modifiers',
-            description: 'Modifiers that change the arena floor',
-            settings: [
-                { key: 'list[0]', value: 'Icy Land', description: 'Floor becomes ice - super slippery gameplay' },
-                { key: 'list[1]', value: 'Glass Map', description: 'Floor becomes transparent glass - disorienting' },
-                { key: 'list[2]', value: 'Slime Map', description: 'Floor becomes slime blocks - bouncy chaos' },
-                { key: 'list[3]', value: 'Donut Map', description: 'Creates a void hole in the center' },
-                { key: 'list[4]', value: 'Transparent Arena', description: 'Floor becomes invisible barriers' }
-            ]
-        },
-        {
-            section: 'Gameplay Modifiers',
-            description: 'Modifiers that change game mechanics',
-            settings: [
-                { key: 'list[5]', value: 'Low Gravity', description: 'Players float - higher jumps, slower falls' },
-                { key: 'list[6]', value: 'Knockback Boost', description: 'All players get knockback sticks' },
-                { key: 'list[7]', value: 'Darkness', description: 'Blindness + warden effects - limited visibility' },
-                { key: 'list[8]', value: 'Thunderstorm', description: 'Constant lightning strikes - dodge or die' },
-                { key: 'list[9]', value: 'Speed Frenzy', description: 'All players get Speed III - ultra fast' },
-                { key: 'list[10]', value: 'Jump Boost', description: 'All players get Jump Boost III - massive jumps' },
-                { key: 'list[11]', value: 'Explosive Hits', description: 'Hits create explosions - area damage' },
-                { key: 'list[12]', value: 'Size Growth', description: 'Players grow when moving - bigger target' },
-                { key: 'list[13]', value: 'Random Sizes', description: 'Random player sizes - tiny to giant' },
-                { key: 'list[14]', value: 'Wind Charge Storm', description: 'Wind charges fall from sky - airborne chaos' },
-                { key: 'list[15]', value: 'Elytra Launch', description: 'Players get elytra + levitation - aerial combat' },
-                { key: 'list[16]', value: 'Player Stacks', description: 'Players can stack on each other' },
-                { key: 'list[17]', value: 'TNT Rain', description: 'TNT falls from sky - explosive hazards' }
-            ]
-        },
-        {
-            section: 'Mace Modifiers',
-            description: 'Modifiers that affect mace holders',
-            settings: [
-                { key: 'list[18]', value: 'Tiny Mace', description: 'Mace holders become tiny (0.5x size)' },
-                { key: 'list[19]', value: 'Big Mace', description: 'Mace holders become huge (2.5x size)' },
-                { key: 'list[20]', value: 'Mace or Die', description: 'Mace holders must KILL, not just hit' },
-                { key: 'list[21]', value: 'Double Mace', description: '2 maces per round - double the fun' },
-                { key: 'list[22]', value: 'Triple Mace', description: '3 maces per round - pure chaos' },
-                { key: 'list[23]', value: 'Shockwave Mace', description: 'Mace kills create shockwaves' },
-                { key: 'list[24]', value: 'Mace Drop', description: 'Mace drops from barrel in center' },
-                { key: 'list[25]', value: 'Windburst Mace', description: 'Mace has Wind Burst III enchantment' }
-            ]
-        }
-    ],
+'levels.yml': [
+    {
+        section: 'Level Tiers Configuration',
+        description: 'Configure all rank tiers and their display names',
+        settings: [
+            { key: 'list[0]', value: '["Bronze", "&6&lBronze"]', description: 'Bronze tier - Levels I-X' },
+            { key: 'list[1]', value: '["Silver", "&7&lSilver"]', description: 'Silver tier - Levels I-X' },
+            { key: 'list[2]', value: '["Gold", "&6&lGold"]', description: 'Gold tier - Levels I-X' },
+            { key: 'list[3]', value: '["Platinum", "&b&lPlatinum"]', description: 'Platinum tier - Levels I-X' },
+            { key: 'list[4]', value: '["Diamond", "&b&lDiamond"]', description: 'Diamond tier - Levels I-X' },
+            { key: 'list[5]', value: '["Master", "&d&lMaster"]', description: 'Master tier - Levels I-X' },
+            { key: 'list[6]', value: '["Elite", "&e&lElite"]', description: 'Elite tier - Levels I-X' },
+            { key: 'list[7]', value: '["Legend", "&e&lLegend"]', description: 'Legend tier - Levels I-X' },
+            { key: 'list[8]', value: '["Champion", "&c&lCHAMPION"]', description: 'Champion tier - No level numbers' }
+        ]
+    },
+    {
+        section: 'Level Number Format',
+        description: 'Control how level numbers are displayed',
+        settings: [
+            { key: 'level-number-format', value: '{roman}', description: 'Use {roman} for Roman numerals (I, II, III) or {number} for regular numbers (1, 2, 3)' }
+        ]
+    },
+    {
+        section: 'Progress Bar Settings',
+        description: 'Customize the appearance of the XP progress bar',
+        settings: [
+            { key: 'progress-bar.filled-character', value: '|', description: 'Character for filled progress (only ONE character allowed)' },
+            { key: 'progress-bar.empty-character', value: '|', description: 'Character for empty progress (only ONE character allowed)' },
+            { key: 'progress-bar.filled-color', value: '&a', description: 'Color code for filled progress (green)' },
+            { key: 'progress-bar.empty-color', value: '&7', description: 'Color code for empty progress (gray)' },
+            { key: 'progress-bar.left-bracket', value: '&8[', description: 'Left bracket character/color' },
+            { key: 'progress-bar.right-bracket', value: '&8]', description: 'Right bracket character/color' }
+        ]
+    }
+],
+'arena.yml': [
+    {
+        section: 'Arena Location',
+        description: 'Set the center of your arena',
+        settings: [
+            { key: 'center', value: '""', description: 'Format: world,x,y,z,yaw,pitch (e.g., world,0,100,0,0,0)' },
+            { key: 'facing', value: '""', description: 'Direction players face when spawned (N, S, E, W)' }
+        ]
+    },
+    {
+        section: 'Modifiers Configuration',
+        description: 'Enable/disable and select which modifiers appear in games. Each modifier uses format: ["identifier", "&f&lDisplay Name"]',
+        settings: [
+            { key: 'modifiers.enabled', value: 'true', description: 'Master switch for all modifiers' }
+        ]
+    },
+    {
+        section: 'Map Modifiers (NEW FORMAT)',
+        description: 'Modifiers that change the arena floor - Now using [identifier, display_name] format',
+        settings: [
+            { key: 'list[0]', value: '["Icy Land", "&f&lIcy Land"]', description: 'Floor becomes ice - super slippery gameplay' },
+            { key: 'list[1]', value: '["Glass Map", "&f&lGlass Map"]', description: 'Floor becomes transparent glass - disorienting' },
+            { key: 'list[2]', value: '["Slime Map", "&f&lSlime Map"]', description: 'Floor becomes slime blocks - bouncy chaos' },
+            { key: 'list[3]', value: '["Donut Map", "&f&lDonut Map"]', description: 'Creates a void hole in the center' },
+            { key: 'list[4]', value: '["Transparent Arena", "&f&lTransparent Arena"]', description: 'Floor becomes invisible barriers' }
+        ]
+    },
+    {
+        section: 'Gameplay Modifiers (NEW FORMAT)',
+        description: 'Modifiers that change game mechanics - Now using [identifier, display_name] format',
+        settings: [
+            { key: 'list[5]', value: '["Low Gravity", "&f&lLow Gravity"]', description: 'Players float - higher jumps, slower falls' },
+            { key: 'list[6]', value: '["Knockback Boost", "&f&lKnockback Boost"]', description: 'All players get knockback sticks' },
+            { key: 'list[7]', value: '["Darkness", "&f&lDarkness"]', description: 'Blindness + warden effects - limited visibility' },
+            { key: 'list[8]', value: '["Thunderstorm", "&f&lThunderstorm"]', description: 'Constant lightning strikes - dodge or die' },
+            { key: 'list[9]', value: '["Speed Frenzy", "&f&lSpeed Frenzy"]', description: 'All players get Speed III - ultra fast' },
+            { key: 'list[10]', value: '["Jump Boost", "&f&lJump Boost"]', description: 'All players get Jump Boost III - massive jumps' },
+            { key: 'list[11]', value: '["Explosive Hits", "&f&lExplosive Hits"]', description: 'Hits create explosions - area damage' },
+            { key: 'list[12]', value: '["Size Growth", "&f&lSize Growth"]', description: 'Players grow when moving - bigger target' },
+            { key: 'list[13]', value: '["Random Sizes", "&f&lRandom Sizes"]', description: 'Random player sizes - tiny to giant' },
+            { key: 'list[14]', value: '["Wind Charge Storm", "&f&lWind Charge Storm"]', description: 'Wind charges fall from sky - airborne chaos' },
+            { key: 'list[15]', value: '["Elytra Launch", "&f&lElytra Launch"]', description: 'Players get elytra + levitation - aerial combat' },
+            { key: 'list[16]', value: '["Player Stacks", "&f&lPlayer Stacks"]', description: 'Players can stack on each other' },
+            { key: 'list[17]', value: '["TNT Rain", "&f&lTNT Rain"]', description: 'TNT falls from sky - explosive hazards' }
+        ]
+    },
+    {
+        section: 'Mace Modifiers (NEW FORMAT)',
+        description: 'Modifiers that affect mace holders - Now using [identifier, display_name] format',
+        settings: [
+            { key: 'list[18]', value: '["Tiny Mace", "&f&lTiny Mace"]', description: 'Mace holders become tiny (0.5x size)' },
+            { key: 'list[19]', value: '["Big Mace", "&f&lBig Mace"]', description: 'Mace holders become huge (2.5x size)' },
+            { key: 'list[20]', value: '["Mace or Die", "&f&lMace or Die"]', description: 'Mace holders must KILL, not just hit' },
+            { key: 'list[21]', value: '["Double Mace", "&f&lDouble Mace"]', description: '2 maces per round - double the fun' },
+            { key: 'list[22]', value: '["Triple Mace", "&f&lTriple Mace"]', description: '3 maces per round - pure chaos' },
+            { key: 'list[23]', value: '["Shockwave Mace", "&f&lShockwave Mace"]', description: 'Mace kills create shockwaves' },
+            { key: 'list[24]', value: '["Mace Drop", "&f&lMace Drop"]', description: 'Mace drops from barrel in center' },
+            { key: 'list[25]', value: '["Windburst Mace", "&f&lWindburst Mace"]', description: 'Mace has Wind Burst III enchantment' }
+        ]
+    }
+],
     'language.yml': [
         {
             section: 'Global Settings',
