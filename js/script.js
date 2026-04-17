@@ -315,9 +315,17 @@ game:
   too-many-players: "{prefix} &cᴛᴏᴏ ᴍᴀɴʏ ᴘʟᴀʏᴇʀꜱ! &7ᴏɴʟʏ ᴛʜᴇ ꜰɪʀꜱᴛ {max} ᴡᴇʀᴇ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ ɢᴀᴍᴇ."
   mace-pickup: "&6&l⚔ &e{player} &6&lᴘɪᴄᴋᴇᴅ ᴜᴘ ᴀ ᴍᴀᴄᴇ! ⚔"
   burst-mace-kill: "&aᴛɪᴍᴇʀ ᴡᴀꜱ ʀᴇꜱᴇᴛ!"
+
+  # Mace countdown messages (action bar)
+  mace-hit-countdown: "&c⚔ {seconds}s &eleft to HIT someone!"
+  mace-kill-countdown: "&c⚔ {seconds}s &eleft to KILL someone!"
   
   # Mace messages
   maces-selected: "&c&l⚔ ᴍᴀᴄᴇꜱ ꜱᴇʟᴇᴄᴛᴇᴅ! &e{count} ᴘʟᴀʏᴇʀꜱ ʜᴀᴠᴇ ᴍᴀᴄᴇꜱ!"
+
+  # Round start message
+  fight-title: "&a&lFIGHT!"      # &a = green, can be changed to any color
+  fight-subtitle: ""             # Empty by default, can add subtitle if desired
 
   # Arena messages
   arena-shrink: "&eᴀʀᴇɴᴀ ꜱʜʀᴜɴᴋ ʙʏ: &c{amount} &eʙʟᴏᴄᴋꜱ"
