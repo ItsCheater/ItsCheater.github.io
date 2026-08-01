@@ -3110,3 +3110,229 @@ footer {
     .cosmetics-list { grid-template-columns: 1fr; }
     .feature-tags-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== STATS EDITOR SECTION ===== */
+.stats-editor-section {
+    padding: 80px 32px;
+    background: radial-gradient(ellipse at 30% 40%, rgba(197, 0, 0, 0.04), transparent);
+}
+
+.stats-editor-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.stats-editor-content {
+    background: var(--bg-card);
+    border: 1px solid rgba(197, 0, 0, 0.15);
+    border-radius: 24px;
+    padding: 48px;
+    margin-top: 40px;
+}
+
+.stats-editor-intro {
+    margin-bottom: 40px;
+}
+
+.stats-editor-intro h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stats-editor-intro h3 i {
+    color: #c50000;
+}
+
+.stats-editor-intro p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.stats-editor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.stats-editor-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(197, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s;
+}
+
+.stats-editor-card:hover {
+    border-color: rgba(197, 0, 0, 0.3);
+}
+
+.stats-editor-card h4 {
+    color: #ff8080;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats-editor-card h4 i {
+    color: #c50000;
+}
+
+.stats-editor-card .cmd-syntax {
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    border-left: 2px solid #c50000;
+}
+
+.stats-editor-card .cmd-syntax .highlight {
+    color: #ffa07a;
+}
+
+.stats-editor-card .cmd-desc-sm {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.stats-level-table {
+    margin: 30px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.stats-level-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-level-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(197, 0, 0, 0.1);
+}
+
+.stats-level-table td {
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stats-level-table tr:last-child td {
+    border-bottom: none;
+}
+
+.stats-level-table tr:hover td {
+    background: rgba(197, 0, 0, 0.05);
+}
+
+.stats-editor-examples {
+    margin-top: 30px;
+}
+
+.stats-editor-examples h4 {
+    color: #ff8080;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats-editor-examples h4 i {
+    color: #c50000;
+}
+
+.example-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.example-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #a0a0c0;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.2s;
+}
+
+.example-item:hover {
+    border-color: rgba(197, 0, 0, 0.3);
+    background: rgba(197, 0, 0, 0.05);
+}
+
+.example-item .cmd {
+    color: #ff8080;
+}
+
+.example-item .desc {
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    display: block;
+    margin-top: 4px;
+}
+
+.stats-editor-alert {
+    margin-top: 30px;
+    padding: 16px 20px;
+    background: rgba(197, 0, 0, 0.08);
+    border: 1px solid rgba(197, 0, 0, 0.2);
+    border-radius: 12px;
+    border-left: 3px solid #c50000;
+}
+
+.stats-editor-alert p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.stats-editor-alert i {
+    color: #c50000;
+    margin-right: 8px;
+}
+
+.stats-editor-alert strong {
+    color: #ff8080;
+}
+
+@media (max-width: 768px) {
+    .stats-editor-content {
+        padding: 24px;
+    }
+    
+    .stats-editor-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .example-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,4 +1,3 @@
-
 // PARTICLES
 (() => {
     const wrap = document.getElementById('particles-wrap');
@@ -70,16 +69,11 @@ document.querySelectorAll('.mod-filter-btn').forEach(btn => {
 // CONFIGURATION TAB SWITCHING
 document.querySelectorAll('.config-tab').forEach(tab => {
     tab.addEventListener('click', function() {
-        // Update active tab
         document.querySelectorAll('.config-tab').forEach(t => t.classList.remove('active'));
         this.classList.add('active');
-        
-        // Hide all config blocks
         document.querySelectorAll('.config-file-block').forEach(block => {
             block.classList.remove('active');
         });
-        
-        // Show selected config
         const configId = this.dataset.config;
         const targetBlock = document.getElementById(`config-${configId}`);
         if (targetBlock) {
@@ -92,8 +86,6 @@ document.querySelectorAll('.config-tab').forEach(tab => {
 document.querySelectorAll('.config-copy').forEach(btn => {
     btn.addEventListener('click', function() {
         const configType = this.dataset.config;
-        // In a real implementation, you would have the full config content
-        // For now, we'll just show a success message
         const origText = this.innerHTML;
         this.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
         this.style.background = 'rgba(34,197,94,0.2)';
@@ -107,7 +99,6 @@ document.querySelectorAll('.config-copy').forEach(btn => {
             this.style.color = '';
         }, 2000);
         
-        // Show notification
         const notification = document.createElement('div');
         notification.className = 'copy-notification';
         notification.textContent = `✓ Copied ${configType}.yml configuration!`;
@@ -253,14 +244,15 @@ facing: ""
 modifiers:
   enabled: true
   list:
-    # Map Modifiers - Changes arena floor
+    # Map Modifiers
     - ["Icy Land", "&f&lIcy Land"]
     - ["Glass Map", "&f&lGlass Map"]
     - ["Slime Map", "&f&lSlime Map"]
     - ["Donut Map", "&f&lDonut Map"]
     - ["Transparent Arena", "&f&lTransparent Arena"]
+    - ["Soul Floor", "&f&lSoul Floor"]
 
-    # Gameplay Modifiers - Changes mechanics
+    # Gameplay Modifiers
     - ["Low Gravity", "&f&lLow Gravity"]
     - ["Knockback Boost", "&f&lKnockback Boost"]
     - ["Darkness", "&f&lDarkness"]
@@ -274,8 +266,12 @@ modifiers:
     - ["Elytra Launch", "&f&lElytra Launch"]
     - ["Player Stacks", "&f&lPlayer Stacks"]
     - ["TNT Rain", "&f&lTNT Rain"]
+    - ["Cobweb Trap", "&f&lCobweb Trap"]
+    - ["Player Blocks", "&f&lPlayer Blocks"]
+    - ["One Punch", "&f&lOne Punch"]
+    - ["Arrow Rain", "&f&lArrow Rain"]
 
-    # Mace Modifiers - Changes mace holder effects
+    # Mace Modifiers
     - ["Tiny Mace", "&f&lTiny Mace"]
     - ["Big Mace", "&f&lBig Mace"]
     - ["Mace or Die", "&f&lMace or Die"]
@@ -283,7 +279,8 @@ modifiers:
     - ["Triple Mace", "&f&lTriple Mace"]
     - ["Shockwave Mace", "&f&lShockwave Mace"]
     - ["Mace Drop", "&f&lMace Drop"]
-    - ["Windburst Mace", "&f&lWindburst Mace"]`,
+    - ["Windburst Mace", "&f&lWindburst Mace"]
+    - ["Magnetic Charges", "&f&lMagnetic Charges"]`,
     'language.yml': `# ═══════════════════════════════════════════════════════════════════
 #                    LANGUAGE CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
@@ -315,6 +312,12 @@ game:
   too-many-players: "{prefix} &cᴛᴏᴏ ᴍᴀɴʏ ᴘʟᴀʏᴇʀꜱ! &7ᴏɴʟʏ ᴛʜᴇ ꜰɪʀꜱᴛ {max} ᴡᴇʀᴇ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ ɢᴀᴍᴇ."
   mace-pickup: "&6&l⚔ &e{player} &6&lᴘɪᴄᴋᴇᴅ ᴜᴘ ᴀ ᴍᴀᴄᴇ! ⚔"
   burst-mace-kill: "&aᴛɪᴍᴇʀ ᴡᴀꜱ ʀᴇꜱᴇᴛ!"
+
+  # Elimination Messages
+  eliminated-smashed: "&c{player} &7ᴡᴀꜱ ꜱᴍᴀꜱʜᴇᴅ ʙʏ &c{killer}&7! &7(&f{left} &7ʟᴇꜰᴛ)"
+  eliminated-void: "&c{player} &7ᴡᴀꜱ ᴛʜʀᴏᴡɴ ᴛᴏ ᴛʜᴇ ᴠᴏɪᴅ ʙʏ &c{killer}&7! &7(&f{left} &7ʟᴇꜰᴛ)"
+  eliminated-killed: "&c{player} &7ᴡᴀꜱ ᴋɪʟʟᴇᴅ ʙʏ &c{killer}&7! &7(&f{left} &7ʟᴇꜰᴛ)"
+  eliminated-default: "&c{player} &7ʜᴀꜱ ʙᴇᴇɴ ᴇʟɪᴍɪɴᴀᴛᴇᴅ! &7(&f{left} &7ʟᴇꜰᴛ)"
 
   # Mace countdown messages (action bar)
   mace-hit-countdown: "&c⚔ {seconds}s &eleft to HIT someone!"
@@ -452,7 +455,7 @@ game:
     - "&cᴀʟɪᴠᴇ: &f{alive}"
     - "&bʀᴏᴜɴᴅ: &f{round}"
     - ""
-    - "&eᴘɪxᴇʟ-ᴍᴄ.ɴᴇᴛ"
+    - "&ᴇᴡᴡᴡ.ʏᴏᴜʀꜱᴇʀᴠᴇʀ.ᴄᴏᴍ"
 
 # Lobby Scoreboard Lines
 # Shown when player is in lobby/waiting
@@ -467,7 +470,7 @@ lobby:
     - "&9ᴏɴʟɪɴᴇ: &f{online}"
     - "&6ᴘʟᴀʏɪɴɢ: &f{playing}"
     - ""
-    - "&eᴘɪxᴇʟ-ᴍᴄ.ɴᴇᴛ"
+    - "&ᴇᴡᴡᴡ.ʏᴏᴜʀꜱᴇʀᴠᴇʀ.ᴄᴏᴍ"
 
 # If empty, countdown will not appear
 countdown-line: "&eɴᴇxᴛ ʀᴏᴜɴᴅ: &f{seconds}ꜱ"
@@ -492,7 +495,7 @@ countdown-line: "&eɴᴇxᴛ ʀᴏᴜɴᴅ: &f{seconds}ꜱ"
 
 # Level Tiers Configuration
 # Format: [identifier, display_name]
-# identifier: Internal name used in code (PLEASE DO NOT CHANGE)
+# identifier: Internal name used in code to know the tier base (PLEASE DO NOT CHANGE)
 # display_name: What players see in chat/menus (includes color codes)
 
 list:
@@ -532,12 +535,12 @@ level-number-format: "{roman}"
 
 # Progress Bar Settings
 progress-bar:
-  filled-character: "|"
-  empty-character: "|"
-  filled-color: "&a"
-  empty-color: "&7"
-  left-bracket: "&8["
-  right-bracket: "&8]"`,
+  filled-character: "|"          # Only one character is allowed to put here.
+  empty-character: "|"           # Only one character is allowed to put here.
+  filled-color: "&a"             # Only one character is allowed to put here.
+  empty-color: "&7"              # Only one character is allowed to put here.
+  left-bracket: "&8["            # Only one character is allowed to put here.
+  right-bracket: "&8]"           # Only one character is allowed to put here.`,
     'spawn.yml': `# ═══════════════════════════════════════════════════════════════════
 #                       SPAWN CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
@@ -598,9 +601,7 @@ training:
       - "GOLD_BLOCK"`,
     'Items/cosmetics.yml': `# ═══════════════════════════════════════════════════════════════════
 #                     COSMETICS ITEM CONFIGURATION
-# ═══════════════════════════════════════════════════════════════════
-
-# Cosmetics Item Settings
+# ═══════════════════════════════════════════════════════════════════# Cosmetics Item Settings
 # This item opens the cosmetics shop GUI
 cosmetics-item:
   material: "CHEST"                       # Base material
@@ -654,6 +655,20 @@ in-queue:
   lore:
     - "&7ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ʟᴇᴀᴠᴇ ǫᴜᴇᴜᴇ"
     - "&7ꜱᴛᴀᴛᴜꜱ: &aɪɴ ǫᴜᴇᴜᴇ"`,
+    'Items/settings.yml': `# ═══════════════════════════════════════════════════════════════════
+#                     SETTINGS ITEM CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+# Settings Item Settings
+# This item opens the player settings GUI
+settings-item:
+  material: "BOOK"                       # Base material
+  item_model: "minecraft:book"           # Change to "maceroulette:settings" for custom model (EXAMPLE)
+  slot: 1
+  action: "OPEN_SETTINGS"                # What happens when clicked
+  name: "&dꜱᴇᴛᴛɪɴɢꜱ"
+  lore:
+    - "&7ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ ᴘʟᴀʏᴇʀ ꜱᴇᴛᴛɪɴɢꜱ"`,
     'Items/training.yml': `# ═══════════════════════════════════════════════════════════════════
 #                     TRAINING ITEMS CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
@@ -684,6 +699,132 @@ wind-charge:
   lore:
     - "&7ʀɪɢʜᴛ-ᴄʟɪᴄᴋ ᴀ ʙʟᴏᴄᴋ ᴛᴏ ʟᴀᴜɴᴄʜ ʏᴏᴜʀꜱᴇʟꜰ"
     - "&7ɪɴꜰɪɴɪᴛᴇ ᴜꜱᴇꜱ (1ꜱ ᴄᴏᴏʟᴅᴏᴡɴ)"`,
+    'menus/cosmeticsMenus/deathanimations.yml': `# ═══════════════════════════════════════════════════════════════════
+#                     DEATH ANIMATIONS MENU CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+# Menu Type: DECORATIVE or FILL or EMPTY
+# DECORATIVE - Uses the exact design from code (borders fixed)
+# FILL - Fills all empty slots with your chosen fill item
+# EMPTY - No border/fill items at all, only your defined items
+menu-type: "DECORATIVE"
+title: "&dᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴꜱ"
+
+# Only used when menu-type: FILL
+fill-item:
+  material: "GRAY_STAINED_GLASS_PANE"
+  item_model: "minecraft:gray_stained_glass_pane"
+  name: " "
+
+# Only used when menu-type: DECORATIVE
+# You can change these items but NOT their slots
+decorative:
+  border-item:
+    material: "BLACK_STAINED_GLASS_PANE"
+    item_model: "minecraft:black_stained_glass_pane"
+    name: " "
+
+  top-decoration:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    item_model: "minecraft:purple_stained_glass_pane"
+    name: "&dᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴꜱ ꜱʜᴏᴘ"
+
+# These messages appear on the items
+gui-messages:
+  owned: "&aᴏᴡɴᴇᴅ"
+  price: "&6ᴘʀɪᴄᴇ: &f{price} {icon}"
+  level-required: "&7ʀᴇǫᴜɪʀᴇᴅ: &f{level}"
+  currently-selected: "&aᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇʟᴇᴄᴛᴇᴅ"
+  click-select: "&eʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ꜱᴇʟᴇᴄᴛ"
+  click-purchase: "&eʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴘᴜʀᴄʜᴀꜱᴇ"
+  click-remove: "&eᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ"
+
+# Shows player's current coins
+coins-display:
+  slot: 10
+  material: "SUNFLOWER"
+  item_model: "minecraft:sunflower"
+  name: "&6ʏᴏᴜʀ ᴄᴏɪɴꜱ"
+  lore:
+    - "&7➥ &f{coins} {icon}"
+  action: "NONE"
+
+# Remove death animation button (sets to none)
+remove-item:
+  slot: 16
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&c⬤ ɴᴏɴᴇ"
+  lore:
+    - ""
+    - "&7ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴ"
+    - ""
+  action: "REMOVE_DEATH_ANIMATION"
+
+# Each death animation is a purchasable cosmetic that plays when the player dies
+death-animations:
+  going_sleep:
+    slot: 19
+    material: "RED_BED"
+    item_model: "minecraft:red_bed"
+    name: "&f&lɢᴏɪɴɢ ꜱʟᴇᴇᴘ"
+    price: 700
+    required-level: 0
+    permission: "death_animation_going_sleep"
+
+  soul_suck:
+    slot: 20
+    material: "SOUL_LANTERN"
+    item_model: "minecraft:soul_lantern"
+    name: "&5&lꜱᴏᴜʟ ꜱᴜᴄᴋ"
+    price: 1200
+    required-level: 0
+    permission: "death_animation_soul_suck"
+
+  levitation:
+    slot: 21
+    material: "NETHER_STAR"
+    item_model: "minecraft:nether_star"
+    name: "&e&lʟᴇᴠɪᴛᴀᴛɪᴏɴ"
+    price: 1600
+    required-level: 0
+    permission: "death_animation_levitation"
+
+  balloon_pop:
+    slot: 22
+    material: "RED_DYE"
+    item_model: "minecraft:red_dye"
+    name: "&c&lʙᴀʟʟᴏᴏɴ ᴘᴏᴘ"
+    price: 2000
+    required-level: 0
+    permission: "death_animation_balloon_pop"
+
+  ghast_funeral:
+    slot: 23
+    material: "GHAST_SPAWN_EGG"
+    item_model: "minecraft:ghast_spawn_egg"
+    name: "&7&lɢʜᴀꜱᴛ ꜰᴜɴᴇʀᴀʟ"
+    price: 2500
+    required-level: 1
+    permission: "death_animation_ghast_funeral"
+
+# Back button (returns to cosmetics menu)
+back-item:
+  slot: 45
+  material: "ARROW"
+  item_model: "minecraft:arrow"
+  name: "&eʙᴀᴄᴋ"
+  lore:
+    - "&7ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏꜱᴍᴇᴛɪᴄꜱ ᴍᴇɴᴜ"
+  action: "OPEN_COSMETICS"
+
+# Close button
+close-item:
+  slot: 53
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&cᴄʟᴏꜱᴇ"
+  action: "CLOSE_MENU"`,
     'menus/cosmeticsMenus/helmets.yml': `# ═══════════════════════════════════════════════════════════════════
 #                     HELMETS MENU CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
@@ -714,7 +855,6 @@ decorative:
     item_model: "minecraft:purple_stained_glass_pane"
     name: "&dʜᴇʟᴍᴇᴛ ꜱʜᴏᴘ"
 
-# ===== GUI MESSAGES =====
 # These messages appear on the items
 gui-messages:
   owned: "&aᴏᴡɴᴇᴅ"
@@ -725,7 +865,6 @@ gui-messages:
   click-purchase: "&eʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴘᴜʀᴄʜᴀꜱᴇ"
   click-remove: "&eᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ"
 
-# ===== CUSTOMIZABLE ITEMS =====
 # Shows player's current coins
 coins-display:
   slot: 10
@@ -748,7 +887,6 @@ remove-item:
     - ""
   action: "REMOVE_HELMET"
 
-# ===== HELMET COSMETICS =====
 # All 16 leather helmet colors
 helmets:
   white:
@@ -926,7 +1064,6 @@ decorative:
     item_model: "minecraft:purple_stained_glass_pane"
     name: "&dᴠɪᴄᴛᴏʀʏ ᴘᴏꜱᴇꜱ ꜱʜᴏᴘ"
 
-# ===== GUI MESSAGES =====
 # These messages appear on the items
 gui-messages:
   owned: "&aᴏᴡɴᴇᴅ"
@@ -936,7 +1073,6 @@ gui-messages:
   click-purchase: "&eʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴘᴜʀᴄʜᴀꜱᴇ"
   click-remove: "&eᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ"
 
-# ===== CUSTOMIZABLE ITEMS =====
 # These are the actual functional items - you can change ANYTHING
 
 # Shows player's current coins
@@ -961,7 +1097,6 @@ remove-item:
     - ""
   action: "REMOVE_POSE"
 
-# ===== VICTORY POSES =====
 # Each pose is a purchasable cosmetic
 poses:
   throne_room:
@@ -987,6 +1122,150 @@ poses:
     name: "&5ʙʟᴀᴄᴋ ʜᴏʟᴇ"
     price: 2500
     permission: "black_hole"
+
+# Back button (returns to cosmetics menu)
+back-item:
+  slot: 45
+  material: "ARROW"
+  item_model: "minecraft:arrow"
+  name: "&eʙᴀᴄᴋ"
+  lore:
+    - "&7ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏꜱᴍᴇᴛɪᴄꜱ ᴍᴇɴᴜ"
+  action: "OPEN_COSMETICS"
+
+# Close button
+close-item:
+  slot: 53
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&cᴄʟᴏꜱᴇ"
+  action: "CLOSE_MENU"`,
+    'menus/cosmeticsMenus/smashes.yml': `# ═══════════════════════════════════════════════════════════════════
+#                     SMASH EFFECTS MENU CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+# Menu Type: DECORATIVE or FILL or EMPTY
+# DECORATIVE - Uses the exact design from code (borders fixed)
+# FILL - Fills all empty slots with your chosen fill item
+# EMPTY - No border/fill items at all, only your defined items
+menu-type: "DECORATIVE"
+title: "&dꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛꜱ"
+
+# Only used when menu-type: FILL
+fill-item:
+  material: "GRAY_STAINED_GLASS_PANE"
+  item_model: "minecraft:gray_stained_glass_pane"
+  name: " "
+
+# Only used when menu-type: DECORATIVE
+# You can change these items but NOT their slots
+decorative:
+  border-item:
+    material: "BLACK_STAINED_GLASS_PANE"
+    item_model: "minecraft:black_stained_glass_pane"
+    name: " "
+
+  top-decoration:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    item_model: "minecraft:purple_stained_glass_pane"
+    name: "&dꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛꜱ ꜱʜᴏᴘ"
+
+# These messages appear on the items
+gui-messages:
+  owned: "&aᴏᴡɴᴇᴅ"
+  price: "&6ᴘʀɪᴄᴇ: &f{price} {icon}"
+  level-required: "&7ʀᴇǫᴜɪʀᴇᴅ: &f{level}"
+  currently-selected: "&aᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇʟᴇᴄᴛᴇᴅ"
+  click-select: "&eʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ꜱᴇʟᴇᴄᴛ"
+  click-purchase: "&eʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴘᴜʀᴄʜᴀꜱᴇ"
+  click-remove: "&eᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ"
+
+# Shows player's current coins
+coins-display:
+  slot: 10
+  material: "SUNFLOWER"
+  item_model: "minecraft:sunflower"
+  name: "&6ʏᴏᴜʀ ᴄᴏɪɴꜱ"
+  lore:
+    - "&7➥ &f{coins} {icon}"
+  action: "NONE"
+
+# Remove smash effect button (sets to none)
+remove-item:
+  slot: 16
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&d⬤ ɴᴏɴᴇ"
+  lore:
+    - ""
+    - "&7ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ ꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛ"
+    - ""
+  action: "REMOVE_SMASH"
+
+smashes:
+  anvil_smash:
+    slot: 19
+    material: "ANVIL"
+    item_model: "minecraft:anvil"
+    name: "&7&lᴀɴᴠɪʟ ꜱᴍᴀꜱʜ"
+    price: 900
+    required-level: 0
+    permission: "smash_anvil"
+
+  meteor_smash:
+    slot: 20
+    material: "MAGMA_BLOCK"
+    item_model: "minecraft:magma_block"
+    name: "&c&lᴍᴇᴛᴇᴏʀ ꜱᴛʀɪᴋᴇ"
+    price: 1300
+    required-level: 0
+    permission: "smash_meteor"
+
+  sword_smash:
+    slot: 21
+    material: "DIAMOND_SWORD"
+    item_model: "minecraft:diamond_sword"
+    name: "&b&lꜱᴡᴏʀᴅ ꜱʟᴀꜱʜ"
+    price: 1800
+    required-level: 0
+    permission: "smash_sword"
+
+  hammer_smash:
+    slot: 22
+    material: "IRON_BLOCK"
+    item_model: "minecraft:iron_block"
+    name: "&6&lʜᴀᴍᴍᴇʀ ᴏꜰ ᴊᴜꜱᴛɪᴄᴇ"
+    price: 2500
+    required-level: 0
+    permission: "smash_hammer"
+
+  purple_head_smash:
+    slot: 23
+    material: "PLAYER_HEAD"
+    item_model: "minecraft:player_head"
+    name: "&5&lᴄᴜʀꜱᴇᴅ ᴘᴜʀᴘʟᴇ ʜᴇᴀᴅ"
+    price: 3000
+    required-level: 0
+    permission: "smash_purple_head"
+
+  wall_crush_smash:
+    slot: 24
+    material: "STONE_BRICKS"
+    item_model: "minecraft:stone_bricks"
+    name: "&8&lᴡᴀʟʟ ᴄʀᴜꜱʜ"
+    price: 3500
+    required-level: 0
+    permission: "smash_wall_crush"
+
+  toilet_smash:
+    slot: 25
+    material: "IRON_BLOCK"
+    item_model: "minecraft:iron_block"
+    name: "&f&lᴛᴏɪʟᴇᴛ ꜰʟᴜꜱʜ"
+    price: 4000
+    required-level: 0
+    permission: "smash_toilet"
+
 
 # Back button (returns to cosmetics menu)
 back-item:
@@ -1035,7 +1314,6 @@ decorative:
     item_model: "minecraft:purple_stained_glass_pane"
     name: "&dᴄᴏꜱᴍᴇᴛɪᴄꜱ ꜱʜᴏᴘ"
 
-# ===== CUSTOMIZABLE ITEMS =====
 # These are the actual functional items - you can change ANYTHING
 
 coins-item:
@@ -1059,17 +1337,17 @@ helmets-item:
     - "&7ᴄᴏʟᴏʀᴇᴅ ʟᴇᴀᴛʜᴇʀ ʜᴇʟᴍᴇᴛꜱ"
   action: "OPEN_HELMETS_MENU"
 
-elytra-item:
+death-animations-item:
   slot: 21
-  material: "ELYTRA"
-  item_model: "minecraft:elytra"
-  name: "&bᴇʟʏᴛʀᴀꜱ"
+  material: "RED_BED"
+  item_model: "minecraft:red_bed"
+  name: "&cᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴꜱ"
   lore:
     - ""
-    - "&7➥ &7ᴄᴏᴍɪɴɢ ꜱᴏᴏɴ..."
+    - "&7➥ &7ᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
     - ""
-    - "&7ᴇʟʏᴛʀᴀ ᴄᴏꜱᴍᴇᴛɪᴄꜱ"
-  action: "NONE"
+    - "&7ᴘᴜʀᴄʜᴀꜱᴇ ᴀɴᴅ ꜱᴇʟᴇᴄᴛ ᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴꜱ"
+  action: "OPEN_DEATH_ANIMATIONS_MENU"
 
 player-head-item:
   slot: 22
@@ -1079,6 +1357,8 @@ player-head-item:
   lore:
     - "&7ᴘᴏꜱᴇ: &f{selected-pose}"
     - "&7ʜᴇʟᴍᴇᴛ: &f{selected-helmet}"
+    - "&7ᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴ: &f{selected-death-animation}"
+    - "&7ꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛ: &f{selected-smash}"
   action: "NONE"
 
 effects-item:
@@ -1105,17 +1385,17 @@ poses-item:
     - "&7ᴘᴜʀᴄʜᴀꜱᴇ ᴀɴᴅ ꜱᴇʟᴇᴄᴛ ᴡɪɴ ᴀɴɪᴍᴀᴛɪᴏɴꜱ"
   action: "OPEN_POSES_MENU"
 
-kill-effects-item:
+smashes-item:
   slot: 31
   material: "FIREWORK_ROCKET"
   item_model: "minecraft:firework_rocket"
-  name: "&cᴋɪʟʟ ᴇꜰꜰᴇᴄᴛꜱ"
+  name: "&cꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛꜱ"
   lore:
     - ""
-    - "&7➥ &7ᴄᴏᴍɪɴɢ ꜱᴏᴏɴ..."
+    - "&7➥ &7ᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
     - ""
-    - "&7ᴋɪʟʟ ᴇꜰꜰᴇᴄᴛ ᴄᴏꜱᴍᴇᴛɪᴄꜱ"
-  action: "NONE"
+    - "&7ᴘᴜʀᴄʜᴀꜱᴇ ᴀɴᴅ ꜱᴇʟᴇᴄᴛ ꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛꜱ"
+  action: "OPEN_SMASHES_MENU"
 
 trails-item:
   slot: 32
@@ -1129,6 +1409,128 @@ trails-item:
     - "&7ᴘʟᴀʏᴇʀ ᴛʀᴀɪʟ ᴇꜰꜰᴇᴄᴛꜱ"
   action: "NONE"
 
+close-item:
+  slot: 53
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&cᴄʟᴏꜱᴇ"
+  action: "CLOSE_MENU"`,
+    'menus/main/kit_editor.yml': `# ═══════════════════════════════════════════════════════════════════
+#                     KIT EDITOR MENU CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+menu-type: "DECORATIVE"
+title: "&6ᴋɪᴛ ᴇᴅɪᴛᴏʀ"
+
+decorative:
+  border-item:
+    material: "BLACK_STAINED_GLASS_PANE"
+    item_model: "minecraft:black_stained_glass_pane"
+    name: " "
+  top-decoration:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    item_model: "minecraft:purple_stained_glass_pane"
+    name: "&dᴋɪᴛ ᴇᴅɪᴛᴏʀ"
+
+# Customizable messages
+messages:
+  assigned-mace: "&6✦ ᴀꜱꜱɪɢɴᴇᴅ: ᴛʀᴀɪɴɪɴɢ ᴍᴀᴄᴇ"
+  assigned-wind: "&b✦ ᴀꜱꜱɪɢɴᴇᴅ: ᴡɪɴᴅ ᴄʜᴀʀɢᴇ"
+  empty-slot: "&7✦ ᴇᴍᴘᴛʏ ꜱʟᴏᴛ"
+
+# This item appears in the slot that is reserved for the queue stick
+blocked-slot-item:
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&c&l🚫 ʙʟᴏᴄᴋᴇᴅ ꜱʟᴏᴛ"
+  lore:
+    - "&7ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴘʟᴀᴄᴇ ᴀɴʏ ɪᴛᴇᴍꜱ ʜᴇʀᴇ"
+    - "&7ꜱɪɴᴄᴇ ɪᴛ'ꜱ ᴛʜᴇ ǫᴜᴇᴜᴇ ꜱʟᴏᴛ"
+  action: "KIT_BLOCKED"
+
+
+# The items shown in the kit editor - NOW ON ROW 2 (slots 9-17)
+kit-items:
+  mace:
+    slot: 9
+    material: "MACE"
+    item_model: "minecraft:mace"
+    name: "&6ᴛʀᴀɪɴɪɴɢ ᴍᴀᴄᴇ"
+    lore:
+      - "&7ᴄᴜʀʀᴇɴᴛ ꜱʟᴏᴛ: &f{current-slot}"
+      - ""
+      - "&eᴄʟɪᴄᴋ ᴛʜɪꜱ ᴛʜᴇɴ ᴀ ꜱʟᴏᴛ ʙᴇʟᴏᴡ"
+    action: "KIT_MACE"
+
+  wind-charge:
+    slot: 10
+    material: "WIND_CHARGE"
+    item_model: "minecraft:wind_charge"
+    name: "&bᴛʀᴀɪɴɪɴɢ ᴡɪɴᴅ ᴄʜᴀʀɢᴇ"
+    lore:
+      - "&7ᴄᴜʀʀᴇɴᴛ ꜱʟᴏᴛ: &f{current-slot}"
+      - ""
+      - "&eᴄʟɪᴄᴋ ᴛʜɪꜱ ᴛʜᴇɴ ᴀ ꜱʟᴏᴛ ʙᴇʟᴏᴡ"
+    action: "KIT_WIND_CHARGE"
+
+# Available slots - NOW ON ROW 3 (slots 18-26) and ROW 4 if needed
+slots:
+  0:
+    slot: 18
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 1"
+    action: "KIT_SLOT_0"
+  1:
+    slot: 19
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 2"
+    action: "KIT_SLOT_1"
+  2:
+    slot: 20
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 3"
+    action: "KIT_SLOT_2"
+  3:
+    slot: 21
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 4"
+    action: "KIT_SLOT_3"
+  4:
+    slot: 22
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 5"
+    action: "KIT_SLOT_4"
+  5:
+    slot: 23
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 6"
+    action: "KIT_SLOT_5"
+  6:
+    slot: 24
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 7"
+    action: "KIT_SLOT_6"
+  7:
+    slot: 25
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 8"
+    action: "KIT_SLOT_7"
+  8:
+    slot: 26
+    material: "GRAY_STAINED_GLASS_PANE"
+    item_model: "minecraft:gray_stained_glass_pane"
+    name: "&7ꜱʟᴏᴛ 9"
+    action: "KIT_SLOT_8"
+
+# Close button - moved to slot 53 (bottom right)
 close-item:
   slot: 53
   material: "BARRIER"
@@ -1254,6 +1656,120 @@ leaderboards-item:
     - "&7ᴄʟɪᴄᴋ ᴛᴏ ᴠɪᴇᴡ"
   action: "OPEN_LEADERBOARDS"
 
+close-item:
+  slot: 53
+  material: "BARRIER"
+  item_model: "minecraft:barrier"
+  name: "&cᴄʟᴏꜱᴇ"
+  action: "CLOSE_MENU"`,
+    'menus/main/settings.yml': `# ═══════════════════════════════════════════════════════════════════
+#                     SETTINGS MENU CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════
+
+menu-type: "DECORATIVE"
+title: "&dꜱᴇᴛᴛɪɴɢꜱ"
+
+# Only used when menu-type: FILL
+fill-item:
+  material: "GRAY_STAINED_GLASS_PANE"
+  item_model: "minecraft:gray_stained_glass_pane"
+  name: " "
+
+# Only used when menu-type: DECORATIVE
+decorative:
+  border-item:
+    material: "BLACK_STAINED_GLASS_PANE"
+    item_model: "minecraft:black_stained_glass_pane"
+    name: " "
+  top-decoration:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    item_model: "minecraft:purple_stained_glass_pane"
+    name: "&dꜱᴇᴛᴛɪɴɢꜱ"
+
+# Toggle messages
+toggle-messages:
+  enabled: "&aᴇɴᴀʙʟᴇᴅ"
+  disabled: "&cᴅɪꜱᴀʙʟᴇᴅ"
+  click-toggle: "&eᴄʟɪᴄᴋ ᴛᴏ ᴛᴏɢɢʟᴇ"
+
+# Auto Queue on Join
+auto-queue:
+  slot: 19
+  material: "BREEZE_ROD"
+  item_model: "minecraft:breeze_rod"
+  name: "&6ᴀᴜᴛᴏ ᴊᴏɪɴ ǫᴜᴇᴜᴇ"
+  lore:
+    - "&7ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴊᴏɪɴ ᴛʜᴇ ǫᴜᴇᴜᴇ ᴏɴ ᴊᴏɪɴ"
+    - "&7ꜱᴛᴀᴛᴜꜱ: {status}"
+    - ""
+    - "{click-toggle}"
+  action: "TOGGLE_AUTO_QUEUE"
+
+# Auto Spectate on Death
+auto-spectate:
+  slot: 20
+  material: "PLAYER_HEAD"
+  item_model: "minecraft:player_head"
+  name: "&dᴀᴜᴛᴏ ꜱᴘᴇᴄᴛᴀᴛᴇ ᴏɴ ᴅᴇᴀᴛʜ"
+  lore:
+    - "&7ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ꜱᴘᴇᴄᴛᴀᴛᴇ ᴡʜᴇɴ ʏᴏᴜ ᴅɪᴇ"
+    - "&7ꜱᴛᴀᴛᴜꜱ: {status}"
+    - ""
+    - "{click-toggle}"
+  action: "TOGGLE_AUTO_SPECTATE"
+
+# Night Vision
+night-vision:
+  slot: 21
+  material: "GOLDEN_CARROT"
+  item_model: "minecraft:golden_carrot"
+  name: "&eɴɪɢʜᴛ ᴠɪꜱɪᴏɴ"
+  lore:
+    - "&7ᴘᴇʀᴍᴀɴᴇɴᴛ ɴɪɢʜᴛ ᴠɪꜱɪᴏɴ ᴇꜰꜰᴇᴄᴛ"
+    - "&7ꜱᴛᴀᴛᴜꜱ: {status}"
+    - ""
+    - "{click-toggle}"
+  action: "TOGGLE_NIGHT_VISION"
+
+# Scoreboard
+scoreboard:
+  slot: 22
+  material: "BOOK"
+  item_model: "minecraft:book"
+  name: "&bꜱᴄᴏʀᴇʙᴏᴀʀᴅ"
+  lore:
+    - "&7ꜱʜᴏᴡ ᴛʜᴇ ɪɴ-ɢᴀᴍᴇ ꜱᴄᴏʀᴇʙᴏᴀʀᴅ"
+    - "&7ꜱᴛᴀᴛᴜꜱ: {status}"
+    - ""
+    - "{click-toggle}"
+  action: "TOGGLE_SCOREBOARD"
+
+# Kit Editor
+kit-editor:
+  slot: 23
+  material: "CHEST"
+  item_model: "minecraft:chest"
+  name: "&6ᴋɪᴛ ᴇᴅɪᴛᴏʀ"
+  lore:
+    - "&7ᴄᴜꜱᴛᴏᴍɪᴢᴇ ʏᴏᴜʀ ᴛʀᴀɪɴɪɴɢ ᴋɪᴛ ꜱʟᴏᴛꜱ"
+    - ""
+    - "&eᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+  action: "OPEN_KIT_EDITOR"
+
+# Elimination Messages Toggle
+elimination-messages:
+  slot: 24
+  material: "TOTEM_OF_UNDYING"
+  item_model: "minecraft:totem_of_undying"
+  name: "&cᴇʟɪᴍɪɴᴀᴛɪᴏɴ ᴍᴇꜱꜱᴀɢᴇꜱ"
+  lore:
+    - "&7ꜱʜᴏᴡ ᴇʟɪᴍɪɴᴀᴛɪᴏɴ ᴍᴇꜱꜱᴀɢᴇꜱ ɪɴ ᴄʜᴀᴛ"
+    - "&7ꜱᴛᴀᴛᴜꜱ: {status}"
+    - ""
+    - "{click-toggle}"
+  action: "TOGGLE_ELIMINATION_MESSAGES"
+
+# Close button
 close-item:
   slot: 53
   material: "BARRIER"
@@ -1447,7 +1963,7 @@ close-item:
   name: "&cᴄʟᴏꜱᴇ"
   action: "CLOSE_MENU"`,
     'plugin.yml': `name: MaceRoulette
-version: 1.0.2
+version: 1.0.5
 main: me.cheater.maceroulette.Main
 api-version: '1.21'
 author: cheater
@@ -1626,47 +2142,53 @@ const configGuides = {
         ]
     },
     {
-        section: 'Map Modifiers (NEW FORMAT)',
-        description: 'Modifiers that change the arena floor - Now using [identifier, display_name] format',
+        section: 'Map Modifiers',
+        description: 'Modifiers that change the arena floor - Using [identifier, display_name] format',
         settings: [
             { key: 'list[0]', value: '["Icy Land", "&f&lIcy Land"]', description: 'Floor becomes ice - super slippery gameplay' },
             { key: 'list[1]', value: '["Glass Map", "&f&lGlass Map"]', description: 'Floor becomes transparent glass - disorienting' },
             { key: 'list[2]', value: '["Slime Map", "&f&lSlime Map"]', description: 'Floor becomes slime blocks - bouncy chaos' },
             { key: 'list[3]', value: '["Donut Map", "&f&lDonut Map"]', description: 'Creates a void hole in the center' },
-            { key: 'list[4]', value: '["Transparent Arena", "&f&lTransparent Arena"]', description: 'Floor becomes invisible barriers' }
+            { key: 'list[4]', value: '["Transparent Arena", "&f&lTransparent Arena"]', description: 'Floor becomes invisible barriers' },
+            { key: 'list[5]', value: '["Soul Floor", "&f&lSoul Floor"]', description: 'Floor becomes soul sand - slowed movement' }
         ]
     },
     {
-        section: 'Gameplay Modifiers (NEW FORMAT)',
-        description: 'Modifiers that change game mechanics - Now using [identifier, display_name] format',
+        section: 'Gameplay Modifiers',
+        description: 'Modifiers that change game mechanics - Using [identifier, display_name] format',
         settings: [
-            { key: 'list[5]', value: '["Low Gravity", "&f&lLow Gravity"]', description: 'Players float - higher jumps, slower falls' },
-            { key: 'list[6]', value: '["Knockback Boost", "&f&lKnockback Boost"]', description: 'All players get knockback sticks' },
-            { key: 'list[7]', value: '["Darkness", "&f&lDarkness"]', description: 'Blindness + warden effects - limited visibility' },
-            { key: 'list[8]', value: '["Thunderstorm", "&f&lThunderstorm"]', description: 'Constant lightning strikes - dodge or die' },
-            { key: 'list[9]', value: '["Speed Frenzy", "&f&lSpeed Frenzy"]', description: 'All players get Speed III - ultra fast' },
-            { key: 'list[10]', value: '["Jump Boost", "&f&lJump Boost"]', description: 'All players get Jump Boost III - massive jumps' },
-            { key: 'list[11]', value: '["Explosive Hits", "&f&lExplosive Hits"]', description: 'Hits create explosions - area damage' },
-            { key: 'list[12]', value: '["Size Growth", "&f&lSize Growth"]', description: 'Players grow when moving - bigger target' },
-            { key: 'list[13]', value: '["Random Sizes", "&f&lRandom Sizes"]', description: 'Random player sizes - tiny to giant' },
-            { key: 'list[14]', value: '["Wind Charge Storm", "&f&lWind Charge Storm"]', description: 'Wind charges fall from sky - airborne chaos' },
-            { key: 'list[15]', value: '["Elytra Launch", "&f&lElytra Launch"]', description: 'Players get elytra + levitation - aerial combat' },
-            { key: 'list[16]', value: '["Player Stacks", "&f&lPlayer Stacks"]', description: 'Players can stack on each other' },
-            { key: 'list[17]', value: '["TNT Rain", "&f&lTNT Rain"]', description: 'TNT falls from sky - explosive hazards' }
+            { key: 'list[6]', value: '["Low Gravity", "&f&lLow Gravity"]', description: 'Players float - higher jumps, slower falls' },
+            { key: 'list[7]', value: '["Knockback Boost", "&f&lKnockback Boost"]', description: 'All players get knockback sticks' },
+            { key: 'list[8]', value: '["Darkness", "&f&lDarkness"]', description: 'Blindness + warden effects - limited visibility' },
+            { key: 'list[9]', value: '["Thunderstorm", "&f&lThunderstorm"]', description: 'Constant lightning strikes - dodge or die' },
+            { key: 'list[10]', value: '["Speed Frenzy", "&f&lSpeed Frenzy"]', description: 'All players get Speed III - ultra fast' },
+            { key: 'list[11]', value: '["Jump Boost", "&f&lJump Boost"]', description: 'All players get Jump Boost III - massive jumps' },
+            { key: 'list[12]', value: '["Explosive Hits", "&f&lExplosive Hits"]', description: 'Hits create explosions - area damage' },
+            { key: 'list[13]', value: '["Size Growth", "&f&lSize Growth"]', description: 'Players grow when moving - bigger target' },
+            { key: 'list[14]', value: '["Random Sizes", "&f&lRandom Sizes"]', description: 'Random player sizes - tiny to giant' },
+            { key: 'list[15]', value: '["Wind Charge Storm", "&f&lWind Charge Storm"]', description: 'Wind charges fall from sky - airborne chaos' },
+            { key: 'list[16]', value: '["Elytra Launch", "&f&lElytra Launch"]', description: 'Players get elytra + levitation - aerial combat' },
+            { key: 'list[17]', value: '["Player Stacks", "&f&lPlayer Stacks"]', description: 'Players can stack on each other' },
+            { key: 'list[18]', value: '["TNT Rain", "&f&lTNT Rain"]', description: 'TNT falls from sky - explosive hazards' },
+            { key: 'list[19]', value: '["Cobweb Trap", "&f&lCobweb Trap"]', description: 'Cobwebs spawn randomly - slow movement' },
+            { key: 'list[20]', value: '["Player Blocks", "&f&lPlayer Blocks"]', description: 'Players can place blocks' },
+            { key: 'list[21]', value: '["One Punch", "&f&lOne Punch"]', description: 'All damage is lethal - one hit kill' },
+            { key: 'list[22]', value: '["Arrow Rain", "&f&lArrow Rain"]', description: 'Arrows fall from sky - ranged hazards' }
         ]
     },
     {
-        section: 'Mace Modifiers (NEW FORMAT)',
-        description: 'Modifiers that affect mace holders - Now using [identifier, display_name] format',
+        section: 'Mace Modifiers',
+        description: 'Modifiers that affect mace holders - Using [identifier, display_name] format',
         settings: [
-            { key: 'list[18]', value: '["Tiny Mace", "&f&lTiny Mace"]', description: 'Mace holders become tiny (0.5x size)' },
-            { key: 'list[19]', value: '["Big Mace", "&f&lBig Mace"]', description: 'Mace holders become huge (2.5x size)' },
-            { key: 'list[20]', value: '["Mace or Die", "&f&lMace or Die"]', description: 'Mace holders must KILL, not just hit' },
-            { key: 'list[21]', value: '["Double Mace", "&f&lDouble Mace"]', description: '2 maces per round - double the fun' },
-            { key: 'list[22]', value: '["Triple Mace", "&f&lTriple Mace"]', description: '3 maces per round - pure chaos' },
-            { key: 'list[23]', value: '["Shockwave Mace", "&f&lShockwave Mace"]', description: 'Mace kills create shockwaves' },
-            { key: 'list[24]', value: '["Mace Drop", "&f&lMace Drop"]', description: 'Mace drops from barrel in center' },
-            { key: 'list[25]', value: '["Windburst Mace", "&f&lWindburst Mace"]', description: 'Mace has Wind Burst III enchantment' }
+            { key: 'list[23]', value: '["Tiny Mace", "&f&lTiny Mace"]', description: 'Mace holders become tiny (0.5x size)' },
+            { key: 'list[24]', value: '["Big Mace", "&f&lBig Mace"]', description: 'Mace holders become huge (2.5x size)' },
+            { key: 'list[25]', value: '["Mace or Die", "&f&lMace or Die"]', description: 'Mace holders must KILL, not just hit' },
+            { key: 'list[26]', value: '["Double Mace", "&f&lDouble Mace"]', description: '2 maces per round - double the fun' },
+            { key: 'list[27]', value: '["Triple Mace", "&f&lTriple Mace"]', description: '3 maces per round - pure chaos' },
+            { key: 'list[28]', value: '["Shockwave Mace", "&f&lShockwave Mace"]', description: 'Mace kills create shockwaves' },
+            { key: 'list[29]', value: '["Mace Drop", "&f&lMace Drop"]', description: 'Mace drops from barrel in center' },
+            { key: 'list[30]', value: '["Windburst Mace", "&f&lWindburst Mace"]', description: 'Mace has Wind Burst III enchantment' },
+            { key: 'list[31]', value: '["Magnetic Charges", "&f&lMagnetic Charges"]', description: 'Mace attracts nearby players' }
         ]
     }
 ],
@@ -1712,6 +2234,16 @@ const configGuides = {
                 { key: 'game.winner', value: '&6⚔ {player} ᴡɪɴꜱ ᴛʜᴇ ɢᴀᴍᴇ! ⚔', description: 'Winner announcement' },
                 { key: 'game.draw', value: '&c⚔ ɢᴀᴍᴇ ᴇɴᴅᴇᴅ ɪɴ ᴀ ᴅʀᴀᴡ! ⚔', description: 'Game ended in draw' },
                 { key: 'game.reset-by-admin', value: '&c&lɢᴀᴍᴇ ʀᴇꜱᴇᴛ ʙʏ ᴀᴅᴍɪɴɪꜱᴛʀᴀᴛᴏʀ', description: 'Admin reset the game' }
+            ]
+        },
+        {
+            section: 'Elimination Messages',
+            description: 'Messages shown when players are eliminated',
+            settings: [
+                { key: 'game.eliminated-smashed', value: '&c{player} &7ᴡᴀꜱ ꜱᴍᴀꜱʜᴇᴅ ʙʏ &c{killer}&7! &7(&f{left} &7ʟᴇꜰᴛ)', description: 'Killed by mace smash' },
+                { key: 'game.eliminated-void', value: '&c{player} &7ᴡᴀꜱ ᴛʜʀᴏᴡɴ ᴛᴏ ᴛʜᴇ ᴠᴏɪᴅ ʙʏ &c{killer}&7! &7(&f{left} &7ʟᴇꜰᴛ)', description: 'Knocked into void' },
+                { key: 'game.eliminated-killed', value: '&c{player} &7ᴡᴀꜱ ᴋɪʟʟᴇᴅ ʙʏ &c{killer}&7! &7(&f{left} &7ʟᴇꜰᴛ)', description: 'Killed by other means' },
+                { key: 'game.eliminated-default', value: '&c{player} &7ʜᴀꜱ ʙᴇᴇɴ ᴇʟɪᴍɪɴᴀᴛᴇᴅ! &7(&f{left} &7ʟᴇꜰᴛ)', description: 'Default elimination message' }
             ]
         },
         {
@@ -1808,7 +2340,7 @@ const configGuides = {
                 { key: 'game.lines[5]', value: '{countdown-line}', description: 'Round countdown' },
                 { key: 'game.lines[6]', value: '&cᴀʟɪᴠᴇ: &f{alive}', description: 'Players still alive' },
                 { key: 'game.lines[7]', value: '&bʀᴏᴜɴᴅ: &f{round}', description: 'Current round number' },
-                { key: 'game.lines[9]', value: '&eᴘɪxᴇʟ-ᴍᴄ.ɴᴇᴛ', description: 'Server IP' }
+                { key: 'game.lines[9]', value: '&ᴇᴡᴡᴡ.ʏᴏᴜʀꜱᴇʀᴠᴇʀ.ᴄᴏᴍ', description: 'Server IP' }
             ]
         },
         {
@@ -1822,7 +2354,7 @@ const configGuides = {
                 { key: 'lobby.lines[5]', value: '&dɪɴ ǫᴜᴇᴜᴇ: &f{queue-size}', description: 'Players in queue' },
                 { key: 'lobby.lines[6]', value: '&9ᴏɴʟɪɴᴇ: &f{online}', description: 'Total online players' },
                 { key: 'lobby.lines[7]', value: '&6ᴘʟᴀʏɪɴɢ: &f{playing}', description: 'Players in game' },
-                { key: 'lobby.lines[9]', value: '&eᴘɪxᴇʟ-ᴍᴄ.ɴᴇᴛ', description: 'Server IP' }
+                { key: 'lobby.lines[9]', value: '&ᴇᴡᴡᴡ.ʏᴏᴜʀꜱᴇʀᴠᴇʀ.ᴄᴏᴍ', description: 'Server IP' }
             ]
         },
         {
@@ -1936,6 +2468,20 @@ const configGuides = {
             ]
         }
     ],
+    'Items/settings.yml': [
+        {
+            section: 'Settings Item',
+            description: 'Item that opens the player settings GUI',
+            settings: [
+                { key: 'settings-item.material', value: 'BOOK', description: 'Material of the item' },
+                { key: 'settings-item.item_model', value: 'minecraft:book', description: 'Custom model data' },
+                { key: 'settings-item.slot', value: '1', description: 'Inventory slot' },
+                { key: 'settings-item.action', value: 'OPEN_SETTINGS', description: 'Action when clicked' },
+                { key: 'settings-item.name', value: '&dꜱᴇᴛᴛɪɴɢꜱ', description: 'Display name' },
+                { key: 'settings-item.lore[0]', value: '&7ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ ᴘʟᴀʏᴇʀ ꜱᴇᴛᴛɪɴɢꜱ', description: 'Item lore' }
+            ]
+        }
+    ],
     'Items/training.yml': [
         {
             section: 'Training Mace',
@@ -1957,6 +2503,36 @@ const configGuides = {
                 { key: 'wind-charge.slot', value: '1', description: 'Inventory slot' },
                 { key: 'wind-charge.amount', value: '1', description: 'Stack size' },
                 { key: 'wind-charge.name', value: '&bᴛʀᴀɪɴɪɴɢ ᴡɪɴᴅ ᴄʜᴀʀɢᴇ', description: 'Display name' }
+            ]
+        }
+    ],
+    'menus/cosmeticsMenus/deathanimations.yml': [
+        {
+            section: 'Menu Settings',
+            description: 'Configure the death animations shop menu',
+            settings: [
+                { key: 'menu-type', value: 'DECORATIVE', description: 'DECORATIVE (fixed design), FILL (fill empty slots), or EMPTY (no borders)' },
+                { key: 'title', value: '&dᴅᴇᴀᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴꜱ', description: 'Menu title with color codes' }
+            ]
+        },
+        {
+            section: 'GUI Messages',
+            description: 'Text displayed on cosmetic items',
+            settings: [
+                { key: 'gui-messages.owned', value: '&aᴏᴡɴᴇᴅ', description: 'Shown when player owns the item' },
+                { key: 'gui-messages.price', value: '&6ᴘʀɪᴄᴇ: &f{price} {icon}', description: 'Price display format' },
+                { key: 'gui-messages.currently-selected', value: '&aᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇʟᴇᴄᴛᴇᴅ', description: 'Shown when item is equipped' }
+            ]
+        },
+        {
+            section: 'Death Animations',
+            description: 'Purchasable death animations',
+            settings: [
+                { key: 'death-animations.going_sleep', value: 'price: 700', description: 'Going sleep death animation - 700 coins' },
+                { key: 'death-animations.soul_suck', value: 'price: 1200', description: 'Soul suck death animation - 1200 coins' },
+                { key: 'death-animations.levitation', value: 'price: 1600', description: 'Levitation death animation - 1600 coins' },
+                { key: 'death-animations.balloon_pop', value: 'price: 2000', description: 'Balloon pop death animation - 2000 coins' },
+                { key: 'death-animations.ghast_funeral', value: 'price: 2500', description: 'Ghast funeral death animation - 2500 coins (requires level 1)' }
             ]
         }
     ],
@@ -2008,6 +2584,29 @@ const configGuides = {
             ]
         }
     ],
+    'menus/cosmeticsMenus/smashes.yml': [
+        {
+            section: 'Menu Settings',
+            description: 'Configure the smash effects shop menu',
+            settings: [
+                { key: 'menu-type', value: 'DECORATIVE', description: 'Menu layout type' },
+                { key: 'title', value: '&dꜱᴍᴀꜱʜ ᴇꜰꜰᴇᴄᴛꜱ', description: 'Menu title' }
+            ]
+        },
+        {
+            section: 'Smash Effects',
+            description: 'Purchasable smash effects',
+            settings: [
+                { key: 'smashes.anvil_smash', value: 'price: 900', description: 'Anvil smash effect - 900 coins' },
+                { key: 'smashes.meteor_smash', value: 'price: 1300', description: 'Meteor smash effect - 1300 coins' },
+                { key: 'smashes.sword_smash', value: 'price: 1800', description: 'Sword smash effect - 1800 coins' },
+                { key: 'smashes.hammer_smash', value: 'price: 2500', description: 'Hammer smash effect - 2500 coins' },
+                { key: 'smashes.purple_head_smash', value: 'price: 3000', description: 'Cursed purple head smash - 3000 coins' },
+                { key: 'smashes.wall_crush_smash', value: 'price: 3500', description: 'Wall crush smash - 3500 coins' },
+                { key: 'smashes.toilet_smash', value: 'price: 4000', description: 'Toilet flush smash - 4000 coins' }
+            ]
+        }
+    ],
     'menus/main/cosmetics.yml': [
         {
             section: 'Main Cosmetics Menu',
@@ -2022,8 +2621,29 @@ const configGuides = {
             description: 'Buttons to access different cosmetic categories',
             settings: [
                 { key: 'helmets-item.slot', value: '13', description: 'Slot for helmets category button' },
+                { key: 'death-animations-item.slot', value: '21', description: 'Slot for death animations button' },
                 { key: 'poses-item.slot', value: '30', description: 'Slot for victory poses button' },
+                { key: 'smashes-item.slot', value: '31', description: 'Slot for smash effects button' },
                 { key: 'player-head-item.slot', value: '22', description: 'Shows currently equipped cosmetics' }
+            ]
+        }
+    ],
+    'menus/main/kit_editor.yml': [
+        {
+            section: 'Kit Editor Menu',
+            description: 'Configure training kit slot assignments',
+            settings: [
+                { key: 'menu-type', value: 'DECORATIVE', description: 'Menu layout type' },
+                { key: 'title', value: '&6ᴋɪᴛ ᴇᴅɪᴛᴏʀ', description: 'Menu title' }
+            ]
+        },
+        {
+            section: 'Customizable Messages',
+            description: 'Messages shown in the kit editor',
+            settings: [
+                { key: 'messages.assigned-mace', value: '&6✦ ᴀꜱꜱɪɢɴᴇᴅ: ᴛʀᴀɪɴɪɴɢ ᴍᴀᴄᴇ', description: 'When mace is assigned to a slot' },
+                { key: 'messages.assigned-wind', value: '&b✦ ᴀꜱꜱɪɢɴᴇᴅ: ᴡɪɴᴅ ᴄʜᴀʀɢᴇ', description: 'When wind charge is assigned to a slot' },
+                { key: 'messages.empty-slot', value: '&7✦ ᴇᴍᴘᴛʏ ꜱʟᴏᴛ', description: 'When a slot is empty' }
             ]
         }
     ],
@@ -2060,6 +2680,28 @@ const configGuides = {
             ]
         }
     ],
+    'menus/main/settings.yml': [
+        {
+            section: 'Settings Menu',
+            description: 'Player settings GUI',
+            settings: [
+                { key: 'menu-type', value: 'DECORATIVE', description: 'Menu layout type' },
+                { key: 'title', value: '&dꜱᴇᴛᴛɪɴɢꜱ', description: 'Menu title' }
+            ]
+        },
+        {
+            section: 'Toggle Settings',
+            description: 'Player preferences that can be toggled',
+            settings: [
+                { key: 'auto-queue.slot', value: '19', description: 'Slot for auto-queue toggle' },
+                { key: 'auto-spectate.slot', value: '20', description: 'Slot for auto-spectate toggle' },
+                { key: 'night-vision.slot', value: '21', description: 'Slot for night vision toggle' },
+                { key: 'scoreboard.slot', value: '22', description: 'Slot for scoreboard toggle' },
+                { key: 'kit-editor.slot', value: '23', description: 'Slot for kit editor button' },
+                { key: 'elimination-messages.slot', value: '24', description: 'Slot for elimination messages toggle' }
+            ]
+        }
+    ],
     'menus/profileMenus/leaderboard.yml': [
         {
             section: 'Leaderboard Menu',
@@ -2076,6 +2718,7 @@ const configGuides = {
                 { key: 'kills-item.slot', value: '10', description: 'Top kills leaderboard position' },
                 { key: 'wins-item.slot', value: '13', description: 'Top wins leaderboard position' },
                 { key: 'games-item.slot', value: '16', description: 'Top games played leaderboard' },
+                { key: 'deaths-item.slot', value: '28', description: 'Top deaths leaderboard' },
                 { key: 'coins-item.slot', value: '31', description: 'Top coins leaderboard' },
                 { key: 'level-item.slot', value: '34', description: 'Top level leaderboard' }
             ]
@@ -2147,7 +2790,11 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleExplainBtn.innerHTML = '<i class="fa-solid fa-code"></i> Raw'; // Show "Raw" because clicking will show raw
         } else {
             const raw = configContents[filename];
-            configContent.innerHTML = `<pre><code>${raw.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>`;
+            if (raw) {
+                configContent.innerHTML = `<pre><code>${raw.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>`;
+            } else {
+                configContent.innerHTML = '<div class="config-guide-error">Config file not found in documentation.</div>';
+            }
             toggleExplainBtn.innerHTML = '<i class="fa-solid fa-book-open"></i> Guide'; // Show "Guide" because clicking will show guide
         }
         
@@ -2165,31 +2812,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Toggle explain
-    toggleExplainBtn.addEventListener('click', () => {
-        showingExplain = !showingExplain;
-        if (showingExplain) {
-            configContent.innerHTML = generateGuideHTML(currentConfig);
-            toggleExplainBtn.innerHTML = '<i class="fa-solid fa-code"></i> Raw'; // Now on Guide, button shows Raw
-        } else {
-            const raw = configContents[currentConfig];
-            configContent.innerHTML = `<pre><code>${raw.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>`;
-            toggleExplainBtn.innerHTML = '<i class="fa-solid fa-book-open"></i> Guide'; // Now on Raw, button shows Guide
-        }
-    });
+    if (toggleExplainBtn) {
+        toggleExplainBtn.addEventListener('click', () => {
+            showingExplain = !showingExplain;
+            if (showingExplain) {
+                configContent.innerHTML = generateGuideHTML(currentConfig);
+                toggleExplainBtn.innerHTML = '<i class="fa-solid fa-code"></i> Raw'; // Now on Guide, button shows Raw
+            } else {
+                const raw = configContents[currentConfig];
+                if (raw) {
+                    configContent.innerHTML = `<pre><code>${raw.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>`;
+                } else {
+                    configContent.innerHTML = '<div class="config-guide-error">Config file not found in documentation.</div>';
+                }
+                toggleExplainBtn.innerHTML = '<i class="fa-solid fa-book-open"></i> Guide'; // Now on Raw, button shows Guide
+            }
+        });
+    }
 
     // Copy button
-    copyBtn.addEventListener('click', () => {
-        const raw = configContents[currentConfig];
-        navigator.clipboard.writeText(raw).then(() => {
-            const original = copyBtn.innerHTML;
-            copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
-            copyBtn.classList.add('copied');
-            setTimeout(() => {
-                copyBtn.innerHTML = original;
-                copyBtn.classList.remove('copied');
-            }, 2000);
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const raw = configContents[currentConfig];
+            if (!raw) return;
+            navigator.clipboard.writeText(raw).then(() => {
+                const original = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                copyBtn.classList.add('copied');
+                setTimeout(() => {
+                    copyBtn.innerHTML = original;
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            });
         });
-    });
+    }
 
     // Load default config.yml with guide view
     loadConfig('config.yml');
@@ -2218,7 +2874,7 @@ document.querySelectorAll('.cmd-category-btn').forEach(btn => {
         
         // Show/hide command groups
         document.querySelectorAll('.cmd-group').forEach(group => {
-            if (group.dataset.category === category) {
+            if (group.dataset.category === category || category === 'all') {
                 group.style.display = 'block';
             } else {
                 group.style.display = 'none';

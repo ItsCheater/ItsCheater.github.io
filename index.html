@@ -83,6 +83,7 @@
                 <a href="#extras" class="nav-link">Extras</a>
                 <a href="#modifiers" class="nav-link">Modifiers</a>
                 <a href="#commands" class="nav-link">Commands</a>
+                <a href="#stats-editor" class="nav-link">Stats Editor</a>
                 <a href="#placeholders" class="nav-link">Placeholders</a>
                 <a href="#config" class="nav-link">Config</a>
                 <a href="#credits" class="nav-link">Credits</a>
@@ -100,6 +101,7 @@
             <a href="#extras">Extras</a>
             <a href="#modifiers">Modifiers</a>
             <a href="#commands">Commands</a>
+            <a href="#stats-editor">Stats Editor</a>
             <a href="#placeholders">Placeholders</a>
             <a href="#config">Config</a>
             <a href="#credits">Credits</a>
@@ -121,7 +123,7 @@
                 <i class="fa-solid fa-gavel mace"></i>
             </div>
             <h1 class="hero-title reveal">MACE ROULETTE</h1>
-            <p class="hero-sub reveal">The ultimate Minecraft mace-based battle royale plugin. modifiers, cosmetics, leaderboards.</p>
+            <p class="hero-sub reveal">The ultimate Minecraft mace-based battle royale plugin. Modifiers, cosmetics, leaderboards.</p>
             <div class="hero-btns reveal">
                 <a href="https://builtbybit.com/resources/mace-roulette.95043/" target="_blank" class="btn-primary">
                     <i class="fa-solid fa-download"></i> Download on BuiltByBit
@@ -148,9 +150,9 @@
                 </div>
             </div>
             <div class="hero-stats reveal">
-                <div class="hero-stat"><div class="hero-stat-num">26+</div><div class="hero-stat-label">Modifiers</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">32+</div><div class="hero-stat-label">Modifiers</div></div>
                 <div class="hero-stat"><div class="hero-stat-num">1.21+</div><div class="hero-stat-label">Minecraft</div></div>
-                <div class="hero-stat"><div class="hero-stat-num">15+</div><div class="hero-stat-label">Config Files</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">19+</div><div class="hero-stat-label">Config Files</div></div>
                 <div class="hero-stat"><div class="hero-stat-num">17+</div><div class="hero-stat-label">Placeholders</div></div>
             </div>
         </div>
@@ -172,7 +174,7 @@
                 </div>
                 <div class="feature-card reveal searchable-item">
                     <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <div class="feature-title">26 Game Modifiers</div>
+                    <div class="feature-title">32 Game Modifiers</div>
                     <div class="feature-desc">Dynamic round modifiers spanning map changes, player effects, and mace alterations. No two rounds feel the same.</div>
                 </div>
                 <div class="feature-card reveal searchable-item">
@@ -183,7 +185,7 @@
                 <div class="feature-card reveal searchable-item">
                     <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
                     <div class="feature-title">Cosmetics System</div>
-                    <div class="feature-desc">Custom kill effects, trails, and win poses purchasable with in-game coins earned through gameplay.</div>
+                    <div class="feature-desc">Custom kill effects, trails, win poses, death animations, smash effects, and helmets purchasable with in-game coins.</div>
                 </div>
                 <div class="feature-card reveal searchable-item">
                     <div class="feature-icon"><i class="fa-solid fa-dumbbell"></i></div>
@@ -208,7 +210,7 @@
                 <div class="feature-card reveal searchable-item">
                     <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
                     <div class="feature-title">Fully Configurable</div>
-                    <div class="feature-desc">15+ dedicated config files covering every aspect of the plugin — messages, arena, prices, scoreboard, and more.</div>
+                    <div class="feature-desc">19+ dedicated config files covering every aspect of the plugin — messages, arena, prices, scoreboard, menus, and more.</div>
                 </div>
             </div>
         </div>
@@ -308,14 +310,24 @@
                         <p>Custom victory animations and celebrations</p>
                     </div>
                     <div class="cosmetic-item">
-                        <i class="fa-solid fa-palette"></i>
-                        <h4>Kill Effects</h4>
-                        <p>Spectacular particle effects on eliminations</p>
+                        <i class="fa-solid fa-skull"></i>
+                        <h4>Death Animations</h4>
+                        <p>Spectacular effects when players are eliminated</p>
+                    </div>
+                    <div class="cosmetic-item">
+                        <i class="fa-solid fa-hand-fist"></i>
+                        <h4>Smash Effects</h4>
+                        <p>Custom visual effects on mace smash hits</p>
+                    </div>
+                    <div class="cosmetic-item">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                        <h4>Colored Helmets</h4>
+                        <p>16 different leather helmet colors to customize your look</p>
                     </div>
                     <div class="cosmetic-item">
                         <i class="fa-solid fa-wind"></i>
                         <h4>Trails</h4>
-                        <p>Custom movement trails and auras</p>
+                        <p>Custom movement trails and auras (Coming Soon)</p>
                     </div>
                 </div>
             </div>
@@ -370,14 +382,14 @@
         <div class="section-inner">
             <div class="reveal">
                 <div class="section-label"><i class="fa-solid fa-dice"></i> Modifiers</div>
-                <h2 class="section-title">26 Game Modifiers</h2>
+                <h2 class="section-title">32 Game Modifiers</h2>
                 <p class="section-desc">Dynamic round modifiers that transform every match. Each game randomly selects modifiers to keep gameplay fresh and unpredictable.</p>
             </div>
             <div class="mod-filter-bar" style="margin-top:40px">
-                <button class="mod-filter-btn active" data-filter="all">All (26)</button>
-                <button class="mod-filter-btn" data-filter="map">Map (5)</button>
-                <button class="mod-filter-btn" data-filter="effect">Effect (11)</button>
-                <button class="mod-filter-btn" data-filter="mace">Mace (10)</button>
+                <button class="mod-filter-btn active" data-filter="all">All (32)</button>
+                <button class="mod-filter-btn" data-filter="map">Map (6)</button>
+                <button class="mod-filter-btn" data-filter="effect">Effect (17)</button>
+                <button class="mod-filter-btn" data-filter="mace">Mace (9)</button>
             </div>
             <div class="modifiers-grid" id="modifiers-grid">
                 <!-- MAP MODIFIERS -->
@@ -405,6 +417,11 @@
                     <div class="mod-tag map"><i class="fa-solid fa-map"></i> Map</div>
                     <div class="mod-name">Transparent Arena</div>
                     <div class="mod-desc">All arena walls become invisible, removing visual boundaries. Players struggle to judge distances and edges, creating a surreal floating-in-space combat experience.</div>
+                </div>
+                <div class="mod-card map reveal searchable-item" data-category="map">
+                    <div class="mod-tag map"><i class="fa-solid fa-map"></i> Map</div>
+                    <div class="mod-name">Soul Floor</div>
+                    <div class="mod-desc">The arena floor becomes soul sand, dramatically slowing movement and forcing players to carefully plan every step while fighting.</div>
                 </div>
                 <!-- EFFECT MODIFIERS -->
                 <div class="mod-card effect reveal searchable-item" data-category="effect">
@@ -462,6 +479,26 @@
                     <div class="mod-name">TNT Rain</div>
                     <div class="mod-desc">TNT falls from the sky throughout the entire match, creating constant explosive hazards. Players must dodge falling explosives while simultaneously fighting opponents in the chaos.</div>
                 </div>
+                <div class="mod-card effect reveal searchable-item" data-category="effect">
+                    <div class="mod-tag effect"><i class="fa-solid fa-bolt"></i> Effect</div>
+                    <div class="mod-name">Cobweb Trap</div>
+                    <div class="mod-desc">Cobwebs spawn randomly across the arena, slowing movement and creating tactical choke points that can be used to trap opponents or escape danger.</div>
+                </div>
+                <div class="mod-card effect reveal searchable-item" data-category="effect">
+                    <div class="mod-tag effect"><i class="fa-solid fa-bolt"></i> Effect</div>
+                    <div class="mod-name">Player Blocks</div>
+                    <div class="mod-desc">Players can place blocks in the arena, creating structures for defense or offense. Strategic building becomes a key element of combat.</div>
+                </div>
+                <div class="mod-card effect reveal searchable-item" data-category="effect">
+                    <div class="mod-tag effect"><i class="fa-solid fa-bolt"></i> Effect</div>
+                    <div class="mod-name">One Punch</div>
+                    <div class="mod-desc">All damage is lethal — any hit from any source is an instant elimination. Extreme caution and precise timing are essential for survival.</div>
+                </div>
+                <div class="mod-card effect reveal searchable-item" data-category="effect">
+                    <div class="mod-tag effect"><i class="fa-solid fa-bolt"></i> Effect</div>
+                    <div class="mod-name">Arrow Rain</div>
+                    <div class="mod-desc">Arrows rain down from the sky throughout the match, creating constant ranged threats that force players to keep moving and stay alert.</div>
+                </div>
                 <!-- MACE MODIFIERS -->
                 <div class="mod-card mace reveal searchable-item" data-category="mace">
                     <div class="mod-tag mace"><i class="fa-solid fa-gavel"></i> Mace</div>
@@ -513,628 +550,784 @@
                     <div class="mod-name">Windburst Mace</div>
                     <div class="mod-desc">Every mace hit releases a powerful burst of wind that pushes all nearby players away from the impact point. Positioning near arena edges becomes extremely dangerous.</div>
                 </div>
+                <div class="mod-card mace reveal searchable-item" data-category="mace">
+                    <div class="mod-tag mace"><i class="fa-solid fa-gavel"></i> Mace</div>
+                    <div class="mod-name">Magnetic Charges</div>
+                    <div class="mod-desc">Mace holders attract nearby players like magnets, pulling enemies toward them and setting up devastating smash combos.</div>
+                </div>
             </div>
         </div>
     </section>
 
-<!-- COMMANDS -->
-<section class="section" id="commands">
-    <div class="section-inner">
-        <div class="reveal">
-            <div class="section-label"><i class="fa-solid fa-terminal"></i> Commands</div>
-            <h2 class="section-title">Commands & Permissions</h2>
-            <p class="section-desc">All available commands organized by category. Admin commands require <code class="cmd-inline-perm">maceroulette.admin</code></p>
-        </div>
-
-        <!-- ADMIN GUI PROMO -->
-        <div class="admin-gui-promo reveal">
-            <div class="admin-gui-content">
-                <div class="admin-gui-text">
-                    <span class="admin-gui-badge"><i class="fa-solid fa-crown"></i> ADMIN MADE EASY</span>
-                    <h3 class="admin-gui-title">Complicated Commands?</h3>
-                    <p class="admin-gui-description">No need to memorize complex commands! Just type <code class="admin-gui-code">/mr</code> or <code class="admin-gui-code">/maceroulette</code> to open the dedicated setup GUI. Everything you need is one click away.</p>
-                    <div class="admin-gui-features">
-                        <span><i class="fa-solid fa-check"></i> Arena Setup</span>
-                        <span><i class="fa-solid fa-check"></i> Training Areas</span>
-                        <span><i class="fa-solid fa-check"></i> Protection Zones</span>
-                        <span><i class="fa-solid fa-check"></i> Coin Management</span>
-                    </div>
-                </div>
-                <div class="admin-gui-image-wrapper">
-                    <div class="admin-gui-gradient"></div>
-                   <img src="images/AdminGUI.png" alt="Mace Roulette Admin GUI" class="admin-gui-image">
-                </div>
-            </div>
-        </div>
-
-        <!-- Command Categories -->
-        <div class="cmd-categories reveal">
-            <button class="cmd-category-btn active" data-category="all">All Commands</button>
-            <button class="cmd-category-btn" data-category="player">Player Commands</button>
-            <button class="cmd-category-btn" data-category="admin">Admin Commands</button>
-            <button class="cmd-category-btn" data-category="coins">Coin Management</button>
-            <button class="cmd-category-btn" data-category="setup">Arena Setup</button>
-        </div>
-
-        <!-- All Commands Group (visible by default) -->
-        <div class="cmd-group" data-category="all" style="display: block;">
-            <div class="cmd-group-header">
-                <i class="fa-solid fa-list"></i>
-                <h3>All Commands</h3>
-            </div>
-            <div class="cmd-grid">
-                <!-- Player Commands -->
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr join</span>
-                        <span class="cmd-perm-badge">maceroulette.join</span>
-                    </div>
-                    <div class="cmd-desc">Join the game queue and teleport to the game world</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr join</span></div>
-                    <div class="cmd-note">Automatically puts you in queue and gives lobby items</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr leave</span>
-                        <span class="cmd-perm-badge">maceroulette.leave</span>
-                    </div>
-                    <div class="cmd-desc">Leave the game, queue, or training area</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr leave</span></div>
-                    <div class="cmd-note">Clears inventory, removes effects, and teleports to leave location</div>
-                </div>
-
-                <!-- Admin Commands -->
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Open the admin GUI panel</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr</span></div>
-                    <div class="cmd-note">Opens a visual interface for all admin commands</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr reload</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Reload all configuration files</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr reload</span></div>
-                    <div class="cmd-note">Refreshes config.yml, arena.yml, language.yml, and all menu files</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr resetgame</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Force reset the entire game</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr resetgame</span></div>
-                    <div class="cmd-note warning">⚠️ Warning: This resets everything - clears inventories, teleports all players to spawn, and stops all modifiers</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr build</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Toggle build mode in protection area</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr build</span></div>
-                    <div class="cmd-note">Allows building/destroying inside protected zones</div>
-                </div>
-
-                <!-- Coin Management -->
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins &lt;player&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Check a player's coin balance</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins Notch</span></div>
-                    <div class="cmd-note">Works for online and offline players</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins add &lt;player&gt; &lt;amount&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Add coins to a player</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins add Notch 100</span></div>
-                    <div class="cmd-note">Amount must be positive</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins remove &lt;player&gt; &lt;amount&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Remove coins from a player</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins remove Notch 50</span></div>
-                    <div class="cmd-note">Fails if player doesn't have enough coins</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins set &lt;player&gt; &lt;amount&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set a player's exact coin balance</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins set Notch 1000</span></div>
-                    <div class="cmd-note">Overwrites current balance</div>
-                </div>
-
-                <!-- Arena Setup -->
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setzone</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set the arena center at your current location</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setzone</span></div>
-                    <div class="cmd-note">Also saves the direction you're facing</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setspawn</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set the global spawn location</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setspawn</span></div>
-                    <div class="cmd-note">Where players spawn when they first join</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setleave</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set where players go when they leave the game</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setleave</span></div>
-                    <div class="cmd-note">Used by /mr leave command</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setvoid</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set the void death level at your current Y coordinate</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setvoid</span></div>
-                    <div class="cmd-note">Players die when they fall below this Y level</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr selectprotection</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Get the protection area selection axe</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr selectprotection</span></div>
-                    <div class="cmd-note">Left-click = pos1, Right-click = pos2, Throw in void to save</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr settrainingarea pos1/pos2</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set training area corners</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainingarea pos1</span></div>
-                    <div class="cmd-note">Sets the area where players can enter training mode</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr settrainentity pos1/pos2</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set training golem spawn area</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainentity pos1</span></div>
-                    <div class="cmd-note">Where iron golems spawn for practice</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Player Commands Group (hidden by default) -->
-        <div class="cmd-group" data-category="player" style="display: none;">
-            <div class="cmd-group-header">
-                <i class="fa-solid fa-user"></i>
-                <h3>Player Commands</h3>
-                <span class="cmd-group-badge">No admin required</span>
-            </div>
-            <div class="cmd-grid">
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr join</span>
-                        <span class="cmd-perm-badge">maceroulette.join</span>
-                    </div>
-                    <div class="cmd-desc">Join the game queue and teleport to the game world</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr join</span></div>
-                    <div class="cmd-note">Automatically puts you in queue and gives lobby items</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr leave</span>
-                        <span class="cmd-perm-badge">maceroulette.leave</span>
-                    </div>
-                    <div class="cmd-desc">Leave the game, queue, or training area</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr leave</span></div>
-                    <div class="cmd-note">Clears inventory, removes effects, and teleports to leave location</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Admin Commands Group (hidden by default) -->
-        <div class="cmd-group" data-category="admin" style="display: none;">
-            <div class="cmd-group-header">
-                <i class="fa-solid fa-crown"></i>
-                <h3>Admin Commands</h3>
-                <span class="cmd-group-badge">Requires maceroulette.admin</span>
-            </div>
-            <div class="cmd-grid">
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Open the admin GUI panel</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr</span></div>
-                    <div class="cmd-note">Opens a visual interface for all admin commands</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr reload</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Reload all configuration files</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr reload</span></div>
-                    <div class="cmd-note">Refreshes config.yml, arena.yml, language.yml, and all menu files</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr resetgame</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Force reset the entire game</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr resetgame</span></div>
-                    <div class="cmd-note warning">⚠️ Warning: This resets everything - clears inventories, teleports all players to spawn, and stops all modifiers</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr build</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Toggle build mode in protection area</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr build</span></div>
-                    <div class="cmd-note">Allows building/destroying inside protected zones</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coin Management Group (hidden by default) -->
-        <div class="cmd-group" data-category="coins" style="display: none;">
-            <div class="cmd-group-header">
-                <i class="fa-solid fa-coins"></i>
-                <h3>Coin Management</h3>
-                <span class="cmd-group-badge">Requires maceroulette.admin</span>
-            </div>
-            <div class="cmd-grid">
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins &lt;player&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Check a player's coin balance</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins Notch</span></div>
-                    <div class="cmd-note">Works for online and offline players</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins add &lt;player&gt; &lt;amount&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Add coins to a player</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins add Notch 100</span></div>
-                    <div class="cmd-note">Amount must be positive</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins remove &lt;player&gt; &lt;amount&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Remove coins from a player</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins remove Notch 50</span></div>
-                    <div class="cmd-note">Fails if player doesn't have enough coins</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr coins set &lt;player&gt; &lt;amount&gt;</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set a player's exact coin balance</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins set Notch 1000</span></div>
-                    <div class="cmd-note">Overwrites current balance</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Arena Setup Group (hidden by default) -->
-        <div class="cmd-group" data-category="setup" style="display: none;">
-            <div class="cmd-group-header">
-                <i class="fa-solid fa-map"></i>
-                <h3>Arena Setup Commands</h3>
-                <span class="cmd-group-badge">Requires maceroulette.admin</span>
-            </div>
-            <div class="cmd-grid">
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setzone</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set the arena center at your current location</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setzone</span></div>
-                    <div class="cmd-note">Also saves the direction you're facing</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setspawn</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set the global spawn location</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setspawn</span></div>
-                    <div class="cmd-note">Where players spawn when they first join</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setleave</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set where players go when they leave the game</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setleave</span></div>
-                    <div class="cmd-note">Used by /mr leave command</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr setvoid</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set the void death level at your current Y coordinate</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr setvoid</span></div>
-                    <div class="cmd-note">Players die when they fall below this Y level</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr selectprotection</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Get the protection area selection axe</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr selectprotection</span></div>
-                    <div class="cmd-note">Left-click = pos1, Right-click = pos2, Throw in void to save</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr settrainingarea pos1/pos2</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set training area corners</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainingarea pos1</span></div>
-                    <div class="cmd-note">Sets the area where players can enter training mode</div>
-                </div>
-
-                <div class="cmd-card searchable-item">
-                    <div class="cmd-card-header">
-                        <span class="cmd-command">/mr settrainentity pos1/pos2</span>
-                        <span class="cmd-perm-badge">maceroulette.admin</span>
-                    </div>
-                    <div class="cmd-desc">Set training golem spawn area</div>
-                    <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainentity pos1</span></div>
-                    <div class="cmd-note">Where iron golems spawn for practice</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PLACEHOLDERS -->
-<section class="section" id="placeholders" style="background:rgba(0,0,0,0.3)">
-    <div class="section-inner">
-        <div class="reveal">
-            <div class="section-label"><i class="fa-solid fa-code"></i> PlaceholderAPI</div>
-            <h2 class="section-title">Placeholders</h2>
-        </div>
-        <div class="ph-intro reveal">
-            <p>Seamlessly integrate <span>Mace Roulette</span> statistics into every corner of your server. With full <span>PlaceholderAPI</span> support, you can elegantly surface player stats, competitive rankings, and live leaderboards across scoreboards, tab lists, holograms, and chat — transforming raw data into a compelling, immersive player experience.</p>
-        </div>
-        <div class="reveal">
-            <!-- Player Stats -->
-            <div class="ph-group">
-                <div class="ph-group-title"><i class="fa-solid fa-user"></i> Player Stats</div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_kills_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your total kills across all games (works offline)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_death_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your total deaths across all games (works offline)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_coins_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your current coin balance (works offline)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_wins_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your total wins (works offline)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_topgames_you%</span><span class="ph-dash">—</span><span class="ph-desc">Total games played (works offline)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_kdr_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your kill/death ratio (formatted to 2 decimal places)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_winrate_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your win percentage (formatted with % sign)</span></div>
-            </div>
-            
-            <!-- Level System -->
-            <div class="ph-group">
-                <div class="ph-group-title"><i class="fa-solid fa-layer-group"></i> Level System</div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_level_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your formatted current level (e.g., Bronze I, Silver II)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_progress_you%</span><span class="ph-dash">—</span><span class="ph-desc">Current XP progress toward next level (0-20)</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_progressbar_you%</span><span class="ph-dash">—</span><span class="ph-desc">Visual progress bar [|||||░░░░░░░░░░░░░░░]</span></div>
-            </div>
-            
-            <!-- Server Stats -->
-            <div class="ph-group">
-                <div class="ph-group-title"><i class="fa-solid fa-server"></i> Server Stats</div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_playing%</span><span class="ph-dash">—</span><span class="ph-desc">Players currently in the game world (or total online if worlds mode disabled)</span></div>
-            </div>
-            
-            <!-- Leaderboards -->
-            <div class="ph-group">
-                <div class="ph-group-title"><i class="fa-solid fa-ranking-star"></i> Leaderboards (Top 10)</div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_topkills_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top kills leaderboard — replace with rank #1–10</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_topdeaths_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top deaths leaderboard — replace with rank #1–10</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_topwins_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top wins leaderboard — replace with rank #1–10</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_topgames_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top games played leaderboard — replace with rank #1–10</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_topcoins_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top coins leaderboard — replace with rank #1–10</span></div>
-                <div class="ph-row searchable-item"><span class="ph-code">%mr_toplevel_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top level leaderboard — replace with rank #1–10 (NEW!)</span></div>
+    <!-- COMMANDS -->
+    <section class="section" id="commands">
+        <div class="section-inner">
+            <div class="reveal">
+                <div class="section-label"><i class="fa-solid fa-terminal"></i> Commands</div>
+                <h2 class="section-title">Commands & Permissions</h2>
+                <p class="section-desc">All available commands organized by category. Admin commands require <code class="cmd-inline-perm">maceroulette.admin</code></p>
             </div>
 
-            <!-- Notes -->
-            <div class="ph-note reveal">
-                <p><i class="fa-solid fa-circle-info"></i> All <span>_you</span> placeholders work for both online and offline players! Great for leaderboards and offline stats display.</p>
-                <p><i class="fa-solid fa-hashtag"></i> Leaderboard placeholders return formatted entries like: <span class="ph-code-example">#1. Notch - 100 kills</span></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CONFIGURATIONS -->
-<section class="section" id="config">
-    <div class="section-inner">
-        <div class="reveal">
-            <div class="section-label"><i class="fa-solid fa-gear"></i> Configuration</div>
-            <h2 class="section-title">Configuration Files</h2>
-            <p class="section-desc">15+ dedicated configuration files give you complete control over every aspect of Mace Roulette.</p>
-        </div>
-
-        <!-- Config cards grid (keep as is) -->
-        <div class="config-grid">
-            <div class="config-card reveal searchable-item" data-config="config.yml"><div class="config-card-header"><span class="config-filename">config.yml</span><span class="config-badge">Core</span></div><div class="config-desc">Main plugin settings — database, game rules, queue, multi-world.</div></div>
-            <div class="config-card reveal searchable-item" data-config="arena.yml"><div class="config-card-header"><span class="config-filename">arena.yml</span><span class="config-badge">Arena</span></div><div class="config-desc">Arena center, modifiers list (26 modifiers).</div></div>
-            <div class="config-card reveal searchable-item" data-config="language.yml"><div class="config-card-header"><span class="config-filename">language.yml</span><span class="config-badge">Messages</span></div><div class="config-desc">All plugin messages, titles, action bars, prefixes.</div></div>
-            <div class="config-card reveal searchable-item" data-config="others.yml"><div class="config-card-header"><span class="config-filename">others.yml</span><span class="config-badge">Misc</span></div><div class="config-desc">Chat rewards, worldborder protection.</div></div>
-            <div class="config-card reveal searchable-item" data-config="scoreboard.yml"><div class="config-card-header"><span class="config-filename">scoreboard.yml</span><span class="config-badge">UI</span></div><div class="config-desc">Scoreboard layout, lines, placeholders.</div></div>
-            <div class="config-card reveal searchable-item" data-config="spawn.yml"><div class="config-card-header"><span class="config-filename">spawn.yml</span><span class="config-badge">Locations</span></div><div class="config-desc">Spawn, spectator head, protection region.</div></div>
-            <div class="config-card reveal searchable-item" data-config="training.yml"><div class="config-card-header"><span class="config-filename">training.yml</span><span class="config-badge">Training</span></div><div class="config-desc">Training area, golem spawn, settings.</div></div>
-            <div class="config-card reveal searchable-item" data-config="Items/cosmetics.yml"><div class="config-card-header"><span class="config-filename">cosmetics.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Cosmetics menu item.</div></div>
-            <div class="config-card reveal searchable-item" data-config="Items/profile.yml"><div class="config-card-header"><span class="config-filename">profile.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Profile menu item.</div></div>
-            <div class="config-card reveal searchable-item" data-config="Items/queue.yml"><div class="config-card-header"><span class="config-filename">queue.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Queue toggle item (in/out).</div></div>
-            <div class="config-card reveal searchable-item" data-config="Items/training.yml"><div class="config-card-header"><span class="config-filename">training.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Training mode items (mace, wind charge).</div></div>
-            <div class="config-card reveal searchable-item" data-config="menus/cosmeticsMenus/helmets.yml"><div class="config-card-header"><span class="config-filename">helmets.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Helmet shop menu.</div></div>
-            <div class="config-card reveal searchable-item" data-config="menus/cosmeticsMenus/poses.yml"><div class="config-card-header"><span class="config-filename">poses.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Victory poses menu.</div></div>
-            <div class="config-card reveal searchable-item" data-config="menus/main/cosmetics.yml"><div class="config-card-header"><span class="config-filename">cosmetics.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Main cosmetics shop.</div></div>
-            <div class="config-card reveal searchable-item" data-config="menus/main/profile.yml"><div class="config-card-header"><span class="config-filename">profile.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Profile stats menu.</div></div>
-            <div class="config-card reveal searchable-item" data-config="menus/profileMenus/leaderboard.yml"><div class="config-card-header"><span class="config-filename">leaderboard.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Leaderboard menu.</div></div>
-        </div>
-
-        <!-- Interactive config viewer -->
-        <div class="config-viewer reveal" style="margin-top:48px">
-            <!-- File tabs -->
-            <div class="config-tabs">
-                <button class="config-tab active" data-config="config.yml">config.yml</button>
-                <button class="config-tab" data-config="arena.yml">arena.yml</button>
-                <button class="config-tab" data-config="levels.yml">levels.yml</button>
-                <button class="config-tab" data-config="language.yml">language.yml</button>
-                <button class="config-tab" data-config="others.yml">others.yml</button>
-                <button class="config-tab" data-config="scoreboard.yml">scoreboard.yml</button>
-                <button class="config-tab" data-config="spawn.yml">spawn.yml</button>
-                <button class="config-tab" data-config="training.yml">training.yml</button>
-                <button class="config-tab" data-config="Items/cosmetics.yml">cosmetics.yml</button>
-                <button class="config-tab" data-config="Items/profile.yml">profile.yml</button>
-                <button class="config-tab" data-config="Items/queue.yml">queue.yml</button>
-                <button class="config-tab" data-config="Items/training.yml">training.yml</button>
-                <button class="config-tab" data-config="menus/cosmeticsMenus/helmets.yml">helmets.yml</button>
-                <button class="config-tab" data-config="menus/cosmeticsMenus/poses.yml">poses.yml</button>
-                <button class="config-tab" data-config="menus/main/cosmetics.yml">cosmetics.yml</button>
-                <button class="config-tab" data-config="menus/main/profile.yml">profile.yml</button>
-                <button class="config-tab" data-config="menus/profileMenus/leaderboard.yml">leaderboard.yml</button>
-            </div>
-
-            <!-- Config display area -->
-            <div class="config-display">
-                <div class="config-header">
-                    <span class="current-filename" id="current-filename">config.yml</span>
-                    <div class="config-actions">
-                        <button class="copy-config-btn" id="copy-config-btn"><i class="fa-regular fa-copy"></i> Copy</button>
-                        <button class="toggle-explain-btn" id="toggle-explain-btn"><i class="fa-solid fa-code"></i> Raw</button>
+            <!-- ADMIN GUI PROMO -->
+            <div class="admin-gui-promo reveal">
+                <div class="admin-gui-content">
+                    <div class="admin-gui-text">
+                        <span class="admin-gui-badge"><i class="fa-solid fa-crown"></i> ADMIN MADE EASY</span>
+                        <h3 class="admin-gui-title">Complicated Commands?</h3>
+                        <p class="admin-gui-description">No need to memorize complex commands! Just type <code class="admin-gui-code">/mr</code> or <code class="admin-gui-code">/maceroulette</code> to open the dedicated setup GUI. Everything you need is one click away.</p>
+                        <div class="admin-gui-features">
+                            <span><i class="fa-solid fa-check"></i> Arena Setup</span>
+                            <span><i class="fa-solid fa-check"></i> Training Areas</span>
+                            <span><i class="fa-solid fa-check"></i> Protection Zones</span>
+                            <span><i class="fa-solid fa-check"></i> Coin Management</span>
+                        </div>
+                    </div>
+                    <div class="admin-gui-image-wrapper">
+                        <div class="admin-gui-gradient"></div>
+                        <img src="images/AdminGUI.png" alt="Mace Roulette Admin GUI" class="admin-gui-image">
                     </div>
                 </div>
-                <div class="config-content" id="config-content">
-                    <!-- Raw config will be injected here as <pre> or explanation as <div> -->
+            </div>
+
+            <!-- Command Categories -->
+            <div class="cmd-categories reveal">
+                <button class="cmd-category-btn active" data-category="all">All Commands</button>
+                <button class="cmd-category-btn" data-category="player">Player Commands</button>
+                <button class="cmd-category-btn" data-category="admin">Admin Commands</button>
+                <button class="cmd-category-btn" data-category="coins">Coin Management</button>
+                <button class="cmd-category-btn" data-category="setup">Arena Setup</button>
+            </div>
+
+            <!-- All Commands Group (visible by default) -->
+            <div class="cmd-group" data-category="all" style="display: block;">
+                <div class="cmd-group-header">
+                    <i class="fa-solid fa-list"></i>
+                    <h3>All Commands</h3>
+                </div>
+                <div class="cmd-grid">
+                    <!-- Player Commands -->
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr join</span>
+                            <span class="cmd-perm-badge">maceroulette.join</span>
+                        </div>
+                        <div class="cmd-desc">Join the game queue and teleport to the game world</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr join</span></div>
+                        <div class="cmd-note">Automatically puts you in queue and gives lobby items</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr leave</span>
+                            <span class="cmd-perm-badge">maceroulette.leave</span>
+                        </div>
+                        <div class="cmd-desc">Leave the game, queue, or training area</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr leave</span></div>
+                        <div class="cmd-note">Clears inventory, removes effects, and teleports to leave location</div>
+                    </div>
+
+                    <!-- Admin Commands -->
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Open the admin GUI panel</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr</span></div>
+                        <div class="cmd-note">Opens a visual interface for all admin commands</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr reload</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Reload all configuration files</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr reload</span></div>
+                        <div class="cmd-note">Refreshes config.yml, arena.yml, language.yml, and all menu files</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr resetgame</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Force reset the entire game</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr resetgame</span></div>
+                        <div class="cmd-note warning">⚠️ Warning: This resets everything - clears inventories, teleports all players to spawn, and stops all modifiers</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr build</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Toggle build mode in protection area</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr build</span></div>
+                        <div class="cmd-note">Allows building/destroying inside protected zones</div>
+                    </div>
+
+                    <!-- Coin Management -->
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins &lt;player&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Check a player's coin balance</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins Notch</span></div>
+                        <div class="cmd-note">Works for online and offline players</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins add &lt;player&gt; &lt;amount&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Add coins to a player</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins add Notch 100</span></div>
+                        <div class="cmd-note">Amount must be positive</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins remove &lt;player&gt; &lt;amount&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Remove coins from a player</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins remove Notch 50</span></div>
+                        <div class="cmd-note">Fails if player doesn't have enough coins</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins set &lt;player&gt; &lt;amount&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set a player's exact coin balance</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins set Notch 1000</span></div>
+                        <div class="cmd-note">Overwrites current balance</div>
+                    </div>
+
+                    <!-- Arena Setup -->
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setzone</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set the arena center at your current location</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setzone</span></div>
+                        <div class="cmd-note">Also saves the direction you're facing</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setspawn</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set the global spawn location</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setspawn</span></div>
+                        <div class="cmd-note">Where players spawn when they first join</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setleave</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set where players go when they leave the game</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setleave</span></div>
+                        <div class="cmd-note">Used by /mr leave command</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setvoid</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set the void death level at your current Y coordinate</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setvoid</span></div>
+                        <div class="cmd-note">Players die when they fall below this Y level</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr selectprotection</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Get the protection area selection axe</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr selectprotection</span></div>
+                        <div class="cmd-note">Left-click = pos1, Right-click = pos2, Throw in void to save</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr settrainingarea pos1/pos2</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set training area corners</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainingarea pos1</span></div>
+                        <div class="cmd-note">Sets the area where players can enter training mode</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr settrainentity pos1/pos2</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set training golem spawn area</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainentity pos1</span></div>
+                        <div class="cmd-note">Where iron golems spawn for practice</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- CREDITS -->
-<section class="section" id="credits" style="background:rgba(0,0,0,0.4)" class="credit-panel-wrapper">
-    <div class="section-inner credit-panel-wrapper">
-        <div class="reveal">
-            <div class="section-label"><i class="fa-solid fa-heart"></i> Credits</div>
-            <h2 class="section-title">Credits</h2>
-        </div>
-        <div class="credit-panel reveal">
-            <div class="credit-grid">
-                <div class="credit-card">
-                    <div class="credit-avatar">
-                        <img src="https://s.namemc.com/2d/skin/face.png?id=9550816ed6a958b8&scale=8" alt="AlphaCheaters skin" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+            <!-- Player Commands Group (hidden by default) -->
+            <div class="cmd-group" data-category="player" style="display: none;">
+                <div class="cmd-group-header">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Player Commands</h3>
+                    <span class="cmd-group-badge">No admin required</span>
+                </div>
+                <div class="cmd-grid">
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr join</span>
+                            <span class="cmd-perm-badge">maceroulette.join</span>
+                        </div>
+                        <div class="cmd-desc">Join the game queue and teleport to the game world</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr join</span></div>
+                        <div class="cmd-note">Automatically puts you in queue and gives lobby items</div>
                     </div>
-                    <div class="credit-name">AlphaCheaters</div>
-                    <div class="credit-role">Plugin Developer</div>
-                    <div class="contact-item">
-                        <i class="fab fa-discord"></i>
-                        <span>itscheater</span>
-                        <button class="copy-contact-btn" onclick="copyContact('itscheater',this)" title="Copy Discord"><i class="fas fa-copy"></i></button>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-gamepad"></i>
-                        <span>AlphaCheaters</span>
-                        <button class="copy-contact-btn" onclick="copyContact('AlphaCheaters',this)" title="Copy IGN"><i class="fas fa-copy"></i></button>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-globe"></i>
-                        <span>NameMC Profile</span>
-                        <button class="external-link-btn" onclick="window.open('https://namemc.com/profile/AlphaCheaters.1','_blank')" title="Open NameMC"><i class="fas fa-external-link-alt"></i></button>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-row"><span class="stat-label">Plugin Version</span><span class="stat-val accent">1.0.2</span></div>
-                        <div class="stat-row"><span class="stat-label">Minecraft</span><span class="stat-val">1.21+</span></div>
-                        <div class="stat-row"><span class="stat-label">Released</span><span class="stat-val">2026</span></div>
-                        <div class="stat-row"><span class="stat-label">Platform</span><span class="stat-val">BuiltByBit</span></div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr leave</span>
+                            <span class="cmd-perm-badge">maceroulette.leave</span>
+                        </div>
+                        <div class="cmd-desc">Leave the game, queue, or training area</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr leave</span></div>
+                        <div class="cmd-note">Clears inventory, removes effects, and teleports to leave location</div>
                     </div>
                 </div>
-                <div class="credit-card">
-                    <div class="credit-avatar">
-                        <img src="https://cdn.discordapp.com/icons/1265110294728933386/0a203d507ac339d6f2b9000d2743257f.webp?size=600" alt="Eagle Studios logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+            </div>
+
+            <!-- Admin Commands Group (hidden by default) -->
+            <div class="cmd-group" data-category="admin" style="display: none;">
+                <div class="cmd-group-header">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3>Admin Commands</h3>
+                    <span class="cmd-group-badge">Requires maceroulette.admin</span>
+                </div>
+                <div class="cmd-grid">
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Open the admin GUI panel</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr</span></div>
+                        <div class="cmd-note">Opens a visual interface for all admin commands</div>
                     </div>
-                    <div class="credit-name">Eagle Studios</div>
-                    <div class="credit-role">Development Team</div>
-                    <div class="contact-item">
-                        <i class="fab fa-discord"></i>
-                        <span>Discord Server</span>
-                        <button class="copy-contact-btn" onclick="copyContact('https://discord.gg/mAM6SnRztM',this)" title="Copy Discord Link"><i class="fas fa-copy"></i></button>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr reload</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Reload all configuration files</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr reload</span></div>
+                        <div class="cmd-note">Refreshes config.yml, arena.yml, language.yml, and all menu files</div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>BuiltByBit</span>
-                        <button class="external-link-btn" onclick="window.open('https://builtbybit.com/creators/eagle-studios.157542/','_blank')" title="Open BuiltByBit"><i class="fas fa-external-link-alt"></i></button>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr resetgame</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Force reset the entire game</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr resetgame</span></div>
+                        <div class="cmd-note warning">⚠️ Warning: This resets everything - clears inventories, teleports all players to spawn, and stops all modifiers</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr build</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Toggle build mode in protection area</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr build</span></div>
+                        <div class="cmd-note">Allows building/destroying inside protected zones</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coin Management Group (hidden by default) -->
+            <div class="cmd-group" data-category="coins" style="display: none;">
+                <div class="cmd-group-header">
+                    <i class="fa-solid fa-coins"></i>
+                    <h3>Coin Management</h3>
+                    <span class="cmd-group-badge">Requires maceroulette.admin</span>
+                </div>
+                <div class="cmd-grid">
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins &lt;player&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Check a player's coin balance</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins Notch</span></div>
+                        <div class="cmd-note">Works for online and offline players</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins add &lt;player&gt; &lt;amount&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Add coins to a player</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins add Notch 100</span></div>
+                        <div class="cmd-note">Amount must be positive</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins remove &lt;player&gt; &lt;amount&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Remove coins from a player</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins remove Notch 50</span></div>
+                        <div class="cmd-note">Fails if player doesn't have enough coins</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr coins set &lt;player&gt; &lt;amount&gt;</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set a player's exact coin balance</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr coins set Notch 1000</span></div>
+                        <div class="cmd-note">Overwrites current balance</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arena Setup Group (hidden by default) -->
+            <div class="cmd-group" data-category="setup" style="display: none;">
+                <div class="cmd-group-header">
+                    <i class="fa-solid fa-map"></i>
+                    <h3>Arena Setup Commands</h3>
+                    <span class="cmd-group-badge">Requires maceroulette.admin</span>
+                </div>
+                <div class="cmd-grid">
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setzone</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set the arena center at your current location</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setzone</span></div>
+                        <div class="cmd-note">Also saves the direction you're facing</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setspawn</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set the global spawn location</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setspawn</span></div>
+                        <div class="cmd-note">Where players spawn when they first join</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setleave</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set where players go when they leave the game</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setleave</span></div>
+                        <div class="cmd-note">Used by /mr leave command</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr setvoid</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set the void death level at your current Y coordinate</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr setvoid</span></div>
+                        <div class="cmd-note">Players die when they fall below this Y level</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr selectprotection</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Get the protection area selection axe</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr selectprotection</span></div>
+                        <div class="cmd-note">Left-click = pos1, Right-click = pos2, Throw in void to save</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr settrainingarea pos1/pos2</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set training area corners</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainingarea pos1</span></div>
+                        <div class="cmd-note">Sets the area where players can enter training mode</div>
+                    </div>
+
+                    <div class="cmd-card searchable-item">
+                        <div class="cmd-card-header">
+                            <span class="cmd-command">/mr settrainentity pos1/pos2</span>
+                            <span class="cmd-perm-badge">maceroulette.admin</span>
+                        </div>
+                        <div class="cmd-desc">Set training golem spawn area</div>
+                        <div class="cmd-example">Example: <span class="cmd-example-code">/mr settrainentity pos1</span></div>
+                        <div class="cmd-note">Where iron golems spawn for practice</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- STATS EDITOR SECTION -->
+    <section class="stats-editor-section" id="stats-editor">
+        <div class="stats-editor-inner">
+            <div class="reveal">
+                <div class="section-label"><i class="fa-solid fa-pen-to-square"></i> Stats Editor</div>
+                <h2 class="section-title">Stats Editor</h2>
+                <p class="section-desc">A console-only administration tool to view, edit, and reset player statistics stored in the MaceRoulette database.</p>
+            </div>
+            <div class="stats-editor-content reveal">
+                <div class="stats-editor-intro">
+                    <h3><i class="fa-solid fa-terminal"></i> Console-Only Administration</h3>
+                    <p>These commands can only be executed from the server console. Players cannot use these commands in-game. Works with both SQLite and MySQL, and supports online and offline players. If a player has no existing stats, they will be created automatically when needed.</p>
+                </div>
+
+                <div class="stats-editor-grid">
+                    <div class="stats-editor-card">
+                        <h4><i class="fa-solid fa-eye"></i> View Stats</h4>
+                        <div class="cmd-syntax">/mr stats view <span class="highlight">&lt;player&gt;</span></div>
+                        <div class="cmd-desc-sm">Displays every statistic stored for a player.</div>
+                        <div style="margin-top:12px;font-size:13px;color:var(--text-muted);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;">Example: /mr stats view AlphaCheaters</div>
+                    </div>
+
+                    <div class="stats-editor-card">
+                        <h4><i class="fa-solid fa-pencil"></i> Edit Stats</h4>
+                        <div class="cmd-syntax">/mr stats edit <span class="highlight">&lt;player&gt;</span> <span class="highlight">&lt;stat&gt;</span> <span class="highlight">&lt;operation&gt;</span> <span class="highlight">&lt;value&gt;</span></div>
+                        <div class="cmd-desc-sm">Modifies a specific statistic.</div>
+                        <div style="margin-top:12px;font-size:13px;color:var(--text-muted);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;">Example: /mr stats edit AlphaCheaters coins set 5000</div>
+                    </div>
+                </div>
+
+                <!-- Available Statistics -->
+                <div style="margin:20px 0;">
+                    <h4 style="color:#ff8080;font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-list"></i> Available Statistics</h4>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;">
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">coins</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">kills</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">deaths</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">wins</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">games</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">progress</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff8080;">level</div>
+                    </div>
+                </div>
+
+                <!-- Operations -->
+                <div style="margin:20px 0;">
+                    <h4 style="color:#ff8080;font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-arrows-rotate"></i> Operations</h4>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;">
+                        <div style="background:rgba(0,0,0,0.2);padding:12px 16px;border-radius:8px;border-left:2px solid #22c55e;">
+                            <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#22c55e;">set</div>
+                            <div style="font-size:12px;color:var(--text-muted);">Sets the value exactly</div>
+                        </div>
+                        <div style="background:rgba(0,0,0,0.2);padding:12px 16px;border-radius:8px;border-left:2px solid #4a9eff;">
+                            <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#4a9eff;">add</div>
+                            <div style="font-size:12px;color:var(--text-muted);">Adds a value</div>
+                        </div>
+                        <div style="background:rgba(0,0,0,0.2);padding:12px 16px;border-radius:8px;border-left:2px solid #ff6b6b;">
+                            <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff6b6b;">remove</div>
+                            <div style="font-size:12px;color:var(--text-muted);">Subtracts a value</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level Tier Table -->
+                <div style="margin:20px 0;">
+                    <h4 style="color:#ff8080;font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-layer-group"></i> Level Tier IDs</h4>
+                    <div class="stats-level-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>0</td><td>Bronze</td></tr>
+                                <tr><td>1</td><td>Silver</td></tr>
+                                <tr><td>2</td><td>Gold</td></tr>
+                                <tr><td>3</td><td>Platinum</td></tr>
+                                <tr><td>4</td><td>Diamond</td></tr>
+                                <tr><td>5</td><td>Master</td></tr>
+                                <tr><td>6</td><td>Elite</td></tr>
+                                <tr><td>7</td><td>Legend</td></tr>
+                                <tr><td>8</td><td>CHAMPION</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="font-size:13px;color:var(--text-muted);margin-top:8px;">Level numbers: 1 = I, 2 = II, ... 10 = X. Champion only uses level 0.</div>
+                </div>
+
+                <!-- Level Examples -->
+                <div class="stats-editor-examples">
+                    <h4><i class="fa-solid fa-code"></i> Level Examples</h4>
+                    <div class="example-grid">
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters level set 0 1</span><span class="desc">→ Bronze I</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters level set 2 10</span><span class="desc">→ Gold X</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters level set 3 5</span><span class="desc">→ Platinum V</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters level set 4 9</span><span class="desc">→ Diamond IX</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters level set 6 3</span><span class="desc">→ Elite III</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters level set 8 0</span><span class="desc">→ CHAMPION</span></div>
+                    </div>
+                </div>
+
+                <!-- Reset Section -->
+                <div style="margin:30px 0 20px;padding:20px;background:rgba(197,0,0,0.05);border:1px solid rgba(197,0,0,0.15);border-radius:12px;">
+                    <h4 style="color:#ff8080;font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px;"><i class="fa-solid fa-undo"></i> Reset Stats</h4>
+                    <div class="cmd-syntax" style="background:rgba(0,0,0,0.4);padding:10px 14px;border-radius:8px;margin-bottom:10px;font-size:13px;border-left:2px solid #c50000;">/mr stats reset <span class="highlight">&lt;player&gt;</span> <span class="highlight">&lt;stat&gt;</span></div>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;">
+                        <div style="background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">coins</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">kills</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">deaths</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">wins</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">games</div>
+                        <div style="background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">progress</div>
+                        <div style="background:rgba(197,0,0,0.15);padding:6px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#ff6b6b;border:1px solid rgba(197,0,0,0.3);">all</div>
+                    </div>
+                </div>
+
+                <!-- Alert -->
+                <div class="stats-editor-alert">
+                    <p><i class="fa-solid fa-circle-info"></i> Commands are <strong>case-insensitive</strong>. Supports Java Edition, Bedrock (Geyser), Premium, and Offline/Cracked servers. Data is stored using the player's <strong>UUID</strong>, making name changes safe. All changes are saved directly to the configured database and take effect immediately without requiring a server restart.</p>
+                </div>
+
+                <!-- Common Examples -->
+                <div class="stats-editor-examples" style="margin-top:20px;">
+                    <h4><i class="fa-solid fa-list"></i> Common Examples</h4>
+                    <div class="example-grid">
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters coins set 10000</span><span class="desc">Give 10,000 coins</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters coins add 100</span><span class="desc">Add 100 coins</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters coins remove 500</span><span class="desc">Remove 500 coins</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters wins add 1</span><span class="desc">Increase wins</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats edit AlphaCheaters progress set 10</span><span class="desc">Set progress to 10/20</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats reset AlphaCheaters all</span><span class="desc">Reset all stats</span></div>
+                        <div class="example-item"><span class="cmd">/mr stats view AlphaCheaters</span><span class="desc">View player stats</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLACEHOLDERS -->
+    <section class="section" id="placeholders" style="background:rgba(0,0,0,0.3)">
+        <div class="section-inner">
+            <div class="reveal">
+                <div class="section-label"><i class="fa-solid fa-code"></i> PlaceholderAPI</div>
+                <h2 class="section-title">Placeholders</h2>
+            </div>
+            <div class="ph-intro reveal">
+                <p>Seamlessly integrate <span>Mace Roulette</span> statistics into every corner of your server. With full <span>PlaceholderAPI</span> support, you can elegantly surface player stats, competitive rankings, and live leaderboards across scoreboards, tab lists, holograms, and chat — transforming raw data into a compelling, immersive player experience.</p>
+            </div>
+            <div class="reveal">
+                <!-- Player Stats -->
+                <div class="ph-group">
+                    <div class="ph-group-title"><i class="fa-solid fa-user"></i> Player Stats</div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_kills_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your total kills across all games (works offline)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_death_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your total deaths across all games (works offline)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_coins_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your current coin balance (works offline)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_wins_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your total wins (works offline)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_topgames_you%</span><span class="ph-dash">—</span><span class="ph-desc">Total games played (works offline)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_kdr_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your kill/death ratio (formatted to 2 decimal places)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_winrate_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your win percentage (formatted with % sign)</span></div>
+                </div>
+                
+                <!-- Level System -->
+                <div class="ph-group">
+                    <div class="ph-group-title"><i class="fa-solid fa-layer-group"></i> Level System</div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_level_you%</span><span class="ph-dash">—</span><span class="ph-desc">Your formatted current level (e.g., Bronze I, Silver II)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_progress_you%</span><span class="ph-dash">—</span><span class="ph-desc">Current XP progress toward next level (0-20)</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_progressbar_you%</span><span class="ph-dash">—</span><span class="ph-desc">Visual progress bar [|||||░░░░░░░░░░░░░░░]</span></div>
+                </div>
+                
+                <!-- Server Stats -->
+                <div class="ph-group">
+                    <div class="ph-group-title"><i class="fa-solid fa-server"></i> Server Stats</div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_playing%</span><span class="ph-dash">—</span><span class="ph-desc">Players currently in the game world (or total online if worlds mode disabled)</span></div>
+                </div>
+                
+                <!-- Leaderboards -->
+                <div class="ph-group">
+                    <div class="ph-group-title"><i class="fa-solid fa-ranking-star"></i> Leaderboards (Top 10)</div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_topkills_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top kills leaderboard — replace with rank #1–10</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_topdeaths_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top deaths leaderboard — replace with rank #1–10</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_topwins_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top wins leaderboard — replace with rank #1–10</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_topgames_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top games played leaderboard — replace with rank #1–10</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_topcoins_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top coins leaderboard — replace with rank #1–10</span></div>
+                    <div class="ph-row searchable-item"><span class="ph-code">%mr_toplevel_&lt;1-10&gt;%</span><span class="ph-dash">—</span><span class="ph-desc">Top level leaderboard — replace with rank #1–10</span></div>
+                </div>
+
+                <!-- Notes -->
+                <div class="ph-note reveal">
+                    <p><i class="fa-solid fa-circle-info"></i> All <span>_you</span> placeholders work for both online and offline players! Great for leaderboards and offline stats display.</p>
+                    <p><i class="fa-solid fa-hashtag"></i> Leaderboard placeholders return formatted entries like: <span class="ph-code-example">#1. Notch - 100 kills</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIGURATIONS -->
+    <section class="section" id="config">
+        <div class="section-inner">
+            <div class="reveal">
+                <div class="section-label"><i class="fa-solid fa-gear"></i> Configuration</div>
+                <h2 class="section-title">Configuration Files</h2>
+                <p class="section-desc">19+ dedicated configuration files give you complete control over every aspect of Mace Roulette.</p>
+            </div>
+
+            <!-- Config cards grid -->
+            <div class="config-grid">
+                <div class="config-card reveal searchable-item" data-config="config.yml"><div class="config-card-header"><span class="config-filename">config.yml</span><span class="config-badge">Core</span></div><div class="config-desc">Main plugin settings — database, game rules, queue, multi-world.</div></div>
+                <div class="config-card reveal searchable-item" data-config="arena.yml"><div class="config-card-header"><span class="config-filename">arena.yml</span><span class="config-badge">Arena</span></div><div class="config-desc">Arena center, modifiers list (32 modifiers).</div></div>
+                <div class="config-card reveal searchable-item" data-config="levels.yml"><div class="config-card-header"><span class="config-filename">levels.yml</span><span class="config-badge">Levels</span></div><div class="config-desc">Level tiers, progress bar settings.</div></div>
+                <div class="config-card reveal searchable-item" data-config="language.yml"><div class="config-card-header"><span class="config-filename">language.yml</span><span class="config-badge">Messages</span></div><div class="config-desc">All plugin messages, titles, action bars, prefixes.</div></div>
+                <div class="config-card reveal searchable-item" data-config="others.yml"><div class="config-card-header"><span class="config-filename">others.yml</span><span class="config-badge">Misc</span></div><div class="config-desc">Chat rewards, worldborder protection.</div></div>
+                <div class="config-card reveal searchable-item" data-config="scoreboard.yml"><div class="config-card-header"><span class="config-filename">scoreboard.yml</span><span class="config-badge">UI</span></div><div class="config-desc">Scoreboard layout, lines, placeholders.</div></div>
+                <div class="config-card reveal searchable-item" data-config="spawn.yml"><div class="config-card-header"><span class="config-filename">spawn.yml</span><span class="config-badge">Locations</span></div><div class="config-desc">Spawn, spectator head, protection region.</div></div>
+                <div class="config-card reveal searchable-item" data-config="training.yml"><div class="config-card-header"><span class="config-filename">training.yml</span><span class="config-badge">Training</span></div><div class="config-desc">Training area, golem spawn, settings.</div></div>
+                <div class="config-card reveal searchable-item" data-config="Items/cosmetics.yml"><div class="config-card-header"><span class="config-filename">cosmetics.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Cosmetics menu item.</div></div>
+                <div class="config-card reveal searchable-item" data-config="Items/profile.yml"><div class="config-card-header"><span class="config-filename">profile.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Profile menu item.</div></div>
+                <div class="config-card reveal searchable-item" data-config="Items/queue.yml"><div class="config-card-header"><span class="config-filename">queue.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Queue toggle item (in/out).</div></div>
+                <div class="config-card reveal searchable-item" data-config="Items/settings.yml"><div class="config-card-header"><span class="config-filename">settings.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Settings menu item.</div></div>
+                <div class="config-card reveal searchable-item" data-config="Items/training.yml"><div class="config-card-header"><span class="config-filename">training.yml</span><span class="config-badge">Items</span></div><div class="config-desc">Training mode items (mace, wind charge).</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/cosmeticsMenus/deathanimations.yml"><div class="config-card-header"><span class="config-filename">deathanimations.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Death animations shop menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/cosmeticsMenus/helmets.yml"><div class="config-card-header"><span class="config-filename">helmets.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Helmet shop menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/cosmeticsMenus/poses.yml"><div class="config-card-header"><span class="config-filename">poses.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Victory poses menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/cosmeticsMenus/smashes.yml"><div class="config-card-header"><span class="config-filename">smashes.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Smash effects shop menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/main/cosmetics.yml"><div class="config-card-header"><span class="config-filename">cosmetics.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Main cosmetics shop.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/main/kit_editor.yml"><div class="config-card-header"><span class="config-filename">kit_editor.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Kit editor menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/main/profile.yml"><div class="config-card-header"><span class="config-filename">profile.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Profile stats menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/main/settings.yml"><div class="config-card-header"><span class="config-filename">settings.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Settings menu.</div></div>
+                <div class="config-card reveal searchable-item" data-config="menus/profileMenus/leaderboard.yml"><div class="config-card-header"><span class="config-filename">leaderboard.yml</span><span class="config-badge">Menus</span></div><div class="config-desc">Leaderboard menu.</div></div>
+            </div>
+
+            <!-- Interactive config viewer -->
+            <div class="config-viewer reveal" style="margin-top:48px">
+                <!-- File tabs -->
+                <div class="config-tabs">
+                    <button class="config-tab active" data-config="config.yml">config.yml</button>
+                    <button class="config-tab" data-config="arena.yml">arena.yml</button>
+                    <button class="config-tab" data-config="levels.yml">levels.yml</button>
+                    <button class="config-tab" data-config="language.yml">language.yml</button>
+                    <button class="config-tab" data-config="others.yml">others.yml</button>
+                    <button class="config-tab" data-config="scoreboard.yml">scoreboard.yml</button>
+                    <button class="config-tab" data-config="spawn.yml">spawn.yml</button>
+                    <button class="config-tab" data-config="training.yml">training.yml</button>
+                    <button class="config-tab" data-config="Items/cosmetics.yml">cosmetics.yml</button>
+                    <button class="config-tab" data-config="Items/profile.yml">profile.yml</button>
+                    <button class="config-tab" data-config="Items/queue.yml">queue.yml</button>
+                    <button class="config-tab" data-config="Items/settings.yml">settings.yml</button>
+                    <button class="config-tab" data-config="Items/training.yml">training.yml</button>
+                    <button class="config-tab" data-config="menus/cosmeticsMenus/deathanimations.yml">deathanimations.yml</button>
+                    <button class="config-tab" data-config="menus/cosmeticsMenus/helmets.yml">helmets.yml</button>
+                    <button class="config-tab" data-config="menus/cosmeticsMenus/poses.yml">poses.yml</button>
+                    <button class="config-tab" data-config="menus/cosmeticsMenus/smashes.yml">smashes.yml</button>
+                    <button class="config-tab" data-config="menus/main/cosmetics.yml">cosmetics.yml</button>
+                    <button class="config-tab" data-config="menus/main/kit_editor.yml">kit_editor.yml</button>
+                    <button class="config-tab" data-config="menus/main/profile.yml">profile.yml</button>
+                    <button class="config-tab" data-config="menus/main/settings.yml">settings.yml</button>
+                    <button class="config-tab" data-config="menus/profileMenus/leaderboard.yml">leaderboard.yml</button>
+                </div>
+
+                <!-- Config display area -->
+                <div class="config-display">
+                    <div class="config-header">
+                        <span class="current-filename" id="current-filename">config.yml</span>
+                        <div class="config-actions">
+                            <button class="copy-config-btn" id="copy-config-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                            <button class="toggle-explain-btn" id="toggle-explain-btn"><i class="fa-solid fa-code"></i> Raw</button>
+                        </div>
+                    </div>
+                    <div class="config-content" id="config-content">
+                        <!-- Raw config will be injected here as <pre> or explanation as <div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDITS -->
+    <section class="section" id="credits" style="background:rgba(0,0,0,0.4)" class="credit-panel-wrapper">
+        <div class="section-inner credit-panel-wrapper">
+            <div class="reveal">
+                <div class="section-label"><i class="fa-solid fa-heart"></i> Credits</div>
+                <h2 class="section-title">Credits</h2>
+            </div>
+            <div class="credit-panel reveal">
+                <div class="credit-grid">
+                    <div class="credit-card">
+                        <div class="credit-avatar">
+                            <img src="https://s.namemc.com/2d/skin/face.png?id=9550816ed6a958b8&scale=8" alt="AlphaCheaters skin" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                        </div>
+                        <div class="credit-name">AlphaCheaters</div>
+                        <div class="credit-role">Plugin Developer</div>
+                        <div class="contact-item">
+                            <i class="fab fa-discord"></i>
+                            <span>itscheater</span>
+                            <button class="copy-contact-btn" onclick="copyContact('itscheater',this)" title="Copy Discord"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span>AlphaCheaters</span>
+                            <button class="copy-contact-btn" onclick="copyContact('AlphaCheaters',this)" title="Copy IGN"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>NameMC Profile</span>
+                            <button class="external-link-btn" onclick="window.open('https://namemc.com/profile/AlphaCheaters.1','_blank')" title="Open NameMC"><i class="fas fa-external-link-alt"></i></button>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-row"><span class="stat-label">Plugin Version</span><span class="stat-val accent">1.0.5</span></div>
+                            <div class="stat-row"><span class="stat-label">Minecraft</span><span class="stat-val">1.21+</span></div>
+                            <div class="stat-row"><span class="stat-label">Released</span><span class="stat-val">2026</span></div>
+                            <div class="stat-row"><span class="stat-label">Platform</span><span class="stat-val">BuiltByBit</span></div>
+                        </div>
+                    </div>
+                    <div class="credit-card">
+                        <div class="credit-avatar">
+                            <img src="https://cdn.discordapp.com/icons/1265110294728933386/0a203d507ac339d6f2b9000d2743257f.webp?size=600" alt="Eagle Studios logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                        </div>
+                        <div class="credit-name">Eagle Studios</div>
+                        <div class="credit-role">Development Team</div>
+                        <div class="contact-item">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord Server</span>
+                            <button class="copy-contact-btn" onclick="copyContact('https://discord.gg/mAM6SnRztM',this)" title="Copy Discord Link"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>BuiltByBit</span>
+                            <button class="external-link-btn" onclick="window.open('https://builtbybit.com/creators/eagle-studios.157542/','_blank')" title="Open BuiltByBit"><i class="fas fa-external-link-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
